@@ -56,7 +56,42 @@ header{
     }
 
 }
-@media only screen and (max-width)
+@media only screen and (max-width: 900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+
+
+    }
+    .nav-bar{
+        height: 450px;
+        position: absolute;
+        top:80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #435334;
+        transition: 0.2s;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: red;
+    }
+}
 /*#FAF1E4
 #CEDEBD
 9EB384
