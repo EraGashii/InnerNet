@@ -1,0 +1,32 @@
+/*#FAF1E4
+#CEDEBD
+9EB384
+435334
+*/
+/* contact us */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+}
+body,
+input,
+textarea{
+    font-family: "Gill Sans", sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    min-height:100vh;
+    padding:2rem;
+    background-color: #FAF1E4;
+    overflow: hidden;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width:100%;
+  
+}
+/* end */
