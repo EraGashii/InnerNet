@@ -12,9 +12,51 @@ body{
 }
 header{
     width: 100%;
-    height: 80px;
-    background:green;
+    height: 115px;
+    background:#9EB384;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
 }
+.hamburger{
+    display: none;
+
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+
+}
+.nav-bar ul li a:hover{
+    color: #435334;
+    background-color: white;
+}
+.nav-bar ul li a.active{
+    color:#435334 ;
+    background-color: white;
+}
+@media only screen and(max-width:1320px){
+    header{
+        padding:0 50px;
+    }
+   
+}
+@media only screen and (max-width: 1100){
+    header{
+        padding: 0 50px;
+    }
+
+}
+@media only screen and (max-width)
 /*#FAF1E4
 #CEDEBD
 9EB384
