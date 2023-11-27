@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="css/aboutUs.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
@@ -17,13 +22,20 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <a href="" class="active">Home</a>
+
+                 
+
+                    <a href="index.html" class="">Home</a>
+
                 </li>
                 <li>
                     <a href="">Features</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+
+
+                    <a href="" class="active">About</a>
+
                 </li>
                 <li>
                     <a href="contact.html">Contact us</a>
@@ -33,8 +45,79 @@
 
     </header><!-- navbar ka me permbajt logo about edhe contact us-->
 
+
 </body>
 </html>
 
 
+
+
+    <script>
+        //javascript per navbar
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+    </script>
+
+
+<footer>
+    <div class="footer_info">
+        <div class="footer_width about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
+                 Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
+                 laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
+      <div class="social-media">
+        <ul>
+            <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
+            <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
+             <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
+        </ul>
+      </div>
+                </div>
+        <div class="footer_width link">
+            <h2>Quick Link</h2>
+            <ul class="other_pages">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">About</a></li>
+               
+                <li><a href="">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer_width contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>
+                    <span><i class="lni lni-map-marker"></i></span>
+                    <p>
+                        8368 Maywlower prishtina
+                        
+                    </p>
+                </li>
+                <li>
+                    <span><i class="lni lni-envelope"></i></span>
+                      <a href="">enrik@gmail.com</a>
+
+                </li>
+                <li>
+                    <span><i class="lni lni-phone"></i></span>
+                   <a href="">045,3043,2</a>
+                        
+                    
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="copy-right">
+        <p>2023 @ Enrik dodaj</p>
+    </div>
+</footer>
+</body>
+</html>
 
