@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Login.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+     <img src="image/InsideOut.png" class="logo" width="11%" alt="">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="Index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Features.html">Features</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact us</a>
+                </li>
+                <li>
+                    <a href="" class="active">Log in</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header><!-- navbar ka me permbajt logo about edhe contact us-->
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="pass" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- footer-->
+    <footer>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
+                     Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
+                     laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
+          <div class="social-media">
+            <ul>
+                <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
+                <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
+                 <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
+            </ul>
+          </div>
+                    </div>
+                   
+            <div class="footer_width link">
+                <h2>Quick Link</h2>
+                <ul class="other_pages">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">About</a></li>
+                   
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <span><i class="lni lni-map-marker"></i></span>
+                        <p>
+                            8368 Maywlower prishtina
+                            
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="lni lni-envelope"></i></span>
+                          <a href="">InnerNet@gmail.com</a>
+    
+                    </li>
+                    <li>
+                        <span><i class="lni lni-phone"></i></span>
+                       <a href="">045,3043,2</a>
+                            
+                        
+                    </li>
+                </ul>o
+            </div>
+    
+        </div>
+        <div class="copy-right">
+            <p>2023 @ InnerNet</p>
+        </div>
+    </footer>
+  <script>
+    // sosht e kryne as mir jo
+     function validateForm(){
+            var name = document.getElementById('name');
+            var email=document.getElementById('email');
+            var password =document.getElementById('password');
+            var confirmPassword =document.getElementById('');
+
+            var nameReges=/"[a zA z\s]+$"/;
+            if(!nameReger.test(name)){
+                alert('Please enter a valid name.');
+                return false;
+            }
+            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if(!emailRges.test(email)){
+                alert('Please enter a valid email address');
+                return false;
+            } 
+            if(password.length<6){
+                alert('Password must be at least 6 characters');
+                return false;
+            }
+
+            if(password != confirmPassword){
+                alert('Password do not mach');
+                return false;
+            }
+        }
+  </script>
+</body>
+</html>

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="css/aboutUs.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
-     <img src="image/Brown_and_Nude_Mindfulness_Meditation_Studio_Logo-removebg-preview.png" class="logo" width="11%" alt="">
+        <img src="image/InsideOut.png" class="logo" width="11%" alt="">
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -21,7 +25,7 @@
                     <a href="index.html" class="">Home</a>
                 </li>
                 <li>
-                    <a href="">Features</a>
+                    <a href="Features.html">Features</a>
                 </li>
                 <li>
                     <a href="" class="active">About</a>
@@ -29,17 +33,48 @@
                 <li>
                     <a href="contact.html">Contact us</a>
                 </li>
+                <li>
+                    <a href="LogIn.html">Log in</a>
+                </li>
             </ul>
         </nav>
 
     </header><!-- navbar ka me permbajt logo about edhe contact us-->
-
+</body>
+</html>
     <script>
         //javascript per navbar
         hamburger = document.querySelector(".hamburger");
         hamburger.onclick = function() {
             navBar = document.querySelector(".nav-bar");
             navBar.classList.toggle("active");
+        }
+        //per register form profesoresha e ka bo
+        function validateForm(){
+            var name = document.getElementById('name');
+            var email=document.getElementById('email');
+            var password =document.getElementById('password');
+            var confirmPassword =document.getElementById('');
+
+            var nameReges=/"[a zA z\s]+$"/;
+            if(!nameReger.test(name)){
+                alert('Please enter a valid name.');
+                return false;
+            }
+            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            if(!emailRges.test(email)){
+                alert('Please enter a valid email address');
+                return false;
+            } 
+            if(password.lenght<6){
+                alert('Password must be at least 6 characters');
+                return false;
+            }
+
+            if(password != confirmPassword){
+                alert('Password do not mach');
+                return false;
+            }
         }
 
     </script>
@@ -60,6 +95,7 @@
         </ul>
       </div>
                 </div>
+               
         <div class="footer_width link">
             <h2>Quick Link</h2>
             <ul class="other_pages">
@@ -92,13 +128,17 @@
                         
                     
                 </li>
-            </ul>
+            </ul>o
         </div>
 
     </div>
     <div class="copy-right">
-        <p>2023 @ Enrik dodaj</p>
+        <p>2023 @ InnerNet</p>
     </div>
 </footer>
 </body>
 </html>
+
+
+
+
