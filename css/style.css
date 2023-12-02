@@ -1,9 +1,10 @@
 /*ngjyrat primare qe kan me u perdor ne ndertimin e faqes 
 #FAF1E4
-#CEDEBD
+#CEDEBD 
 9EB384
 435334
 */
+
 /* Start of Navbar CSS*/
 *{
     margin: 0;
@@ -72,8 +73,6 @@ header{
         height: 3px;
         background: white;
         margin: 6px 0;
-
-
     }
     .nav-bar{
         height: 450px;
@@ -107,6 +106,7 @@ header{
 }
 
 /* ketu mbaron CSS per Nav-bar, kujdes mos perdor emerimin e klaseve te njejta*/
+
 
 /*ketu fillon Css per footer*/
 ul,li{
@@ -170,7 +170,7 @@ footer{
     font-size: 18px;
 }
 .link ul li a:hover{
-    color: black;
+    color: 435334;
 }
 .contact ul li{
     display: flex;
@@ -209,8 +209,8 @@ footer{
 
 }
 /*end of footer section*/
-/*-- Our service*/
 
+/*-- Our service*/
 section {
   height: 100vh;
   width: 100%;
@@ -300,3 +300,63 @@ p {
 }
 
     /*-- end of our servis*/
+
+    /*-- about us --*/
+    .about-us{
+        height: 80vh;
+        width: 100%;
+        padding: 80px 0;
+        background: #faf1e477;
+        margin-top: 10%;
+      }
+      .pic{
+        height:auto;
+        width: 300px;
+      }
+      .about{
+        width: 1030px;
+        max-width: 85%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .text{
+        width: 540px;
+      }
+      .text h2{
+        font-size: 90px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .text h5{
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      span{
+        color: #435334;
+      }
+      .text p{
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 1px;
+      }
+      .data{
+        margin-top: 30px;
+      }
+      .hire{
+        font-size: 18px;
+        background: #435334;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        padding: 8px 25px;
+        border-radius: 6px;
+        transition: 0.5s;
+      }
+      .hire:hover{
+        background: #435334;
+        border: 1px solid #435334;
+      }
+      
