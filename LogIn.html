@@ -39,10 +39,10 @@
     <div class="login-wrap">
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
             <div class="login-form">
                 <div class="sign-in-htm">
-                    <div class="group">
+                    <div class="group"> 
                         <label for="user" class="label">Username</label>
                         <input id="user" type="text" class="input">
                     </div>
@@ -149,29 +149,66 @@
         </div>
     </footer>
     <script>
-        let nameRegex = /^[A-Z][a-z]{3,8}$/;
-        let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
-    
-        function validateForm(){
-            let nameInput = document.getElementById('name');
-            let nameError = document.getElementById('nameError');
-            let emailInput = document.getElementById('email');
-            let emailError = document.getElementById('emailError');
-    
-            nameError.innerText = '';
-            emailError.innerText = '';
-    
-            if(!nameRegex.test(nameInput.value)){
-                nameError.innerText = 'invalid name';
-                return;
-            }
-            if(!emailRegex.test(emailInput.value)){
-                emailError.innerText = 'invalid email';
-                return;
-            }
-    
-            alert('form submitted succesfully!');
-        }
+      const email = document.getElementById("email");
+const password = document.getElementById("password"); 
+const form = document.getElementById("form");
+const msg = document.getElementById("msg");
+
+
+
+const validateEmail = (inputEmail)=> inputEmail.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+
+const validatePassword = (inputPassword) => inputPassword.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+
+
+
+const generateError = (errorName, errorMsg) =>{
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+    if(errorName == "email"){
+        emailError.innerText = errorMsg;    
+    }else if(errorName == "password"){
+        passwordError.innerText = errorMsg;
+    }
+}
+
+const formValidate = (inputEmail, inputPassword) =>{
+    if(!validateEmail(inputEmail)){
+        emailError = "please enter a valid email address";
+        generateError("email",emailError);
+        return;
+    }
+    if(!validatePassword(inputPassword)){
+        passwordError = "please enter correct password";
+        generateError(generateError("password",passwordError));
+        return;
+    }
+  
+}
+
+form.addEventListener("submit",(e) => {
+    e.preventDefault();
+    formValidate(email, password);
+});
+
+
+email.addEventListener("focusout", (e)=>{
+    if(!validateEmail(email)){
+        email.style.borderColor = "red";
+        generateError("email", "Please enter a valid email");
+        email.parentElement.classList.add("error");
+    }
+});
+
+password.addEventListener("focusout", (e)=>{
+    if(!validatePassword(password)){
+        password.style.borderColor = "red";
+        generateError("password", "Please enter a valid password");
+        password.parentElement.classList.add("error");
+    }
+});
     </script>
 </body>
 </html>

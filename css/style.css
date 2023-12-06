@@ -28,7 +28,6 @@ header{
 }
 .hamburger{
     display: none;
-
 }
 .nav-bar ul{
     display: flex;
@@ -51,10 +50,12 @@ header{
     color:#435334 ;
     background: white;
 }
+
 @media only screen and(max-width: 1320px){
     header{
         padding:0 50px;
     }
+
    
 }
 @media only screen and (max-width: 1100){
@@ -73,6 +74,9 @@ header{
         height: 3px;
         background: white;
         margin: 6px 0;
+    }
+    header  .logo{
+  position: relative;
     }
     .nav-bar{
         height: 450px;
@@ -209,11 +213,6 @@ footer{
 
 }
 /*end of footer section*/
-<<<<<<< HEAD
-=======
-
-/*-- Our service*/
->>>>>>> refs/remotes/origin/main
 
 /*-- Our service*/
 section {
@@ -249,7 +248,7 @@ h3 {
   color: #9EB384;
   margin: 1em 0;
 }
-p {
+.row p {
   color: #575a7b;
   font-size: 15px;
   line-height: 1.6;
@@ -303,9 +302,8 @@ p {
     max-width: 33.33%;
   }
 }
-
     /*-- end of our servis*/
-
+    
     /*-- about us --*/
     .about-us{
         height: 80vh;
@@ -364,4 +362,44 @@ p {
         background: #435334;
         border: 1px solid #435334;
       }
+   
+/* aboutUs */
+
+      .icons-container{
+        display: grid;
+        gap:1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        padding-top:5rem ;
+        
+    }
+    
+    .icons-container .icons{
+      border: .1rem solid #9EB384;
+      box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
+      border-radius: .5rem;
+      text-align: center;
+    
+      padding: 2.5rem;
+    }
+    
+    .icons-container .icons i{
+       font-size:4.5rem ;
+       color: #9EB384;
+       padding-bottom: .7rem;
+      }
+    
+    
+      .icons-container .icons h3{
+        font-size: 3.5rem;
+        color: #435334;
+        padding: .5rem 0;
+        text-shadow: .4rem .4rem 0 #CEDEBD ;
+      }
+      
+      .icons-container .icons p{
+        font-size: 1.5rem;
+        color: #9EB384 ;
+       
+      }
+      
       

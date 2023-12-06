@@ -1,0 +1,277 @@
+/*ngjyrat primare qe kan me u perdor ne ndertimin e faqes 
+#FAF1E4
+#CEDEBD 
+9EB384
+435334
+*/
+
+/* Start of Navbar CSS*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: #fefefe;
+}
+header{
+  width: 100%;
+  height: 115px;
+  background:#9EB384;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.hamburger{
+  display: none;
+}
+.nav-bar ul{
+  display: flex;
+}
+.nav-bar ul li a {
+  display: block;
+  color: white;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+
+}
+.nav-bar ul li a:hover{
+  color: #435334;
+  background: white;
+}
+.nav-bar ul li a.active{
+  color:#435334 ;
+  background: white;
+}
+@media only screen and(max-width: 1320px){
+  header{
+      padding:0 50px;
+  }
+ 
+}
+@media only screen and (max-width: 1100){
+  header{
+      padding: 0 30px;
+  }
+
+}
+@media only screen and (max-width: 900px){
+  .hamburger{
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger .line{
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 6px 0;
+  }
+  .nav-bar{
+      height: 450px;
+      position: absolute;
+      top:80px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #9EB384;
+      transition: 0.2s;
+      overflow: hidden;
+  }
+  .nav-bar.active{
+      height: 450px;
+  }
+  .nav-bar ul{
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.5s;
+      opacity: 0;
+  }
+  .nav-bar.active ul{
+      opacity: 1;
+  }
+  .nav-bar ul li a{
+      margin-bottom: 12px;
+      color: white;
+  }
+}
+
+/* ketu mbaron CSS per Nav-bar, kujdes mos perdor emerimin e klaseve te njejta*/
+
+
+/*ketu fillon Css per footer*/
+ul,li{
+  list-style-type: none;
+}
+footer{
+  margin-top: 500px;
+  background-color: #9EB384;
+  color:#fff;
+}
+.footer_info{
+  width: 90%;
+  margin: 0 auto ;
+  display: flex;
+  padding: 50px 0;
+}
+.footer_info .footer_width{
+  padding: 0 15px;
+}
+.footer_info h2{
+  margin-bottom: 20px;
+}
+
+.about , .contact{
+  width: 40%;
+}
+.link{
+  width: 20%;
+}
+.social-media{
+  margin-top: 30px;
+}
+.social-media ul{
+  display: flex;
+}
+.footer_width ul li a{
+  transition: .5s;
+  text-decoration: none;
+  color: #fff;
+}
+.social-media ul li a{
+  display: inline-block;
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: .5s;
+  color: #fff;
+}
+.social-media ul li a:hover{
+  background-color: #fff;
+  color: black;
+}
+.link ul li a{
+  display: block;
+      margin-bottom: 15px;
+  font-size: 18px;
+}
+.link ul li a:hover{
+  color: 435334;
+}
+.contact ul li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.contact ul li span{
+  margin-right: 15px;
+}
+.copy-right{
+  padding: 15px 0;
+  text-align: center;
+  background-color: #435334
+
+}
+.lni2{
+  font-size: 25px;
+}
+@media screen and (max-width: 992px){
+.about, .contact{
+  width: 35%;
+}
+.link{
+  width: 30%;
+}
+}
+
+@media screen and (max-width:767px){
+  .about, .contact, .link{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+  .footer_info{
+      flex-direction: column;
+  }
+
+}
+
+
+.heading{
+  padding-top:30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.heading h1{
+  color:#435334;
+}
+
+.doctors .box-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
+  gap: 3rem;
+}
+
+.doctors .box-container .box{
+  text-align: center;
+  background: #fff;
+  border-radius: .5rem;
+  border: .2rem solid #9EB384;
+  box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
+  padding: 2rem;
+
+}
+
+.doctors .box-container .box img{
+  height: 20rem;
+  border: .2rem solid #9EB384;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.doctors .box-container .box img{
+  color: black;
+  font-size: 2.5rem;
+
+}
+
+.doctors .box-container .box span{
+  color: #9EB384;
+  font-size: 1.5rem;
+}
+
+
+.doctors .box-container .box .share{
+  padding-top: 2rem;
+}
+
+.doctors .box-container .box .share a{
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: #9EB384;
+  border-radius: .5rem;
+  border: .2rem solid #9EB384;
+  margin: .3rem;
+
+}
+
+.doctors .box-container .box .share a:hover{
+  background: #9EB384;
+  color: #fff;
+  box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
+}

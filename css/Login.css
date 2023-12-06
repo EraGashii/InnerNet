@@ -50,15 +50,22 @@ header{
   color:#435334 ;
   background: white;
 }
+
 @media only screen and(max-width: 1320px){
   header{
-      padding:0 50px;
+      padding:0 20px;
   }
  
 }
 @media only screen and (max-width: 1100){
   header{
-      padding: 0 30px;
+      padding: 0 15px;
+  
+  }
+  .logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
 }

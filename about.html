@@ -6,10 +6,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/aboutUs.css">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-
 </head>
 <body>
     <header>
@@ -39,103 +35,80 @@
             </ul>
         </nav>
 
-    </header><!-- navbar ka me permbajt logo about edhe contact us-->
-</body>
-</html>
-    <script>
-        //javascript per navbar
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function() {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-        //per register form profesoresha e ka bo
-        function validateForm(){
-            var name = document.getElementById('name');
-            var email=document.getElementById('email');
-            var password =document.getElementById('password');
-            var confirmPassword =document.getElementById('');
+    </header>
+    <!-- navbar ka me permbajt logo about edhe contact us-->
 
-            var nameReges=/"[a zA z\s]+$"/;
-            if(!nameReger.test(name)){
-                alert('Please enter a valid name.');
-                return false;
-            }
-            var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-            if(!emailRges.test(email)){
-                alert('Please enter a valid email address');
-                return false;
-            } 
-            if(password.lenght<6){
-                alert('Password must be at least 6 characters');
-                return false;
-            }
+    <div class="w" id="about">
+        <div class="w">
+         <img src="image/aboutUs.jpg" class="w" alt="Table Setting" width="600" height="750">
+        </div>
 
-            if(password != confirmPassword){
-                alert('Password do not mach');
-                return false;
-            }
-        }
-
-    </script>
-
-
-<footer>
-    <div class="footer_info">
-        <div class="footer_width about">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
-                 Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
-                 laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
-      <div class="social-media">
-        <ul>
-            <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
-            <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
-             <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
-        </ul>
+    <div class="w">
+        <h1 >About Catering</h1><br>
+        <h5 >Tradition since 1889</h5>
+        <p >The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients.</p>
+        <p >Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
-                </div>
-               
-        <div class="footer_width link">
-            <h2>Quick Link</h2>
-            <ul class="other_pages">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">About</a></li>
-               
-                <li><a href="">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer_width contact">
-            <h2>Contact</h2>
+    </div>
+  
+    <footer>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
+                     Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
+                     laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
+          <div class="social-media">
             <ul>
-                <li>
-                    <span><i class="lni lni-map-marker"></i></span>
-                    <p>
-                     Rruga Drini Bardhe -Kline
-                        
-                    </p>
-                </li>
-                <li>
-                    <span><i class="lni lni-envelope"></i></span>
-                      <a href="">InnerNet@gmail.com</a>
-
-                </li>
-                <li>
-                    <span><i class="lni lni-phone"></i></span>
-                   <a href="">044-489-488</a>
-                        
-                    
-                </li>
-            </ul>o
+                <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
+                <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
+                 <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
+            </ul>
+          </div>
+                    </div>    
+            <div class="footer_width link">
+                <h2>Quick Link</h2>
+                <ul class="other_pages">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer_width contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <span><i class="lni lni-map-marker"></i></span>
+                        <p>
+                            8368 Maywlower prishtina
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="lni lni-envelope"></i></span>
+                          <a href="">InnerNet@gmail.com</a>
+                    </li>
+                    <li>
+                        <span><i class="lni lni-phone"></i></span>
+                       <a href="">045,3043,2</a>      
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="copy-right">
+            <p>2023 @ InnerNet</p>
+        </div>
+    </footer>
+<script>
+    //javascript per navbar
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function() {
+        navBar = document.querySelector(".nav-bar");
+        navBar.classList.toggle("active");
+    }
 
-    </div>
-    <div class="copy-right">
-        <p>2023 @ InnerNet</p>
-    </div>
-</footer>
+</script>
 </body>
 </html>
 
