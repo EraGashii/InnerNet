@@ -164,6 +164,7 @@ a {
   .nav .navOpenBtn {
     color: #fff;
     font-size: 20px;
+<<<<<<< HEAD
     cursor: pointer;
   }
   .nav .navCloseBtn {
@@ -181,6 +182,79 @@ a {
     transform: translateX(50%);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
+=======
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+
+}
+.nav-bar ul li a:hover{
+    color: #435334;
+    background: white;
+}
+.nav-bar ul li a.active{
+    color:#435334 ;
+    background: white;
+}
+
+@media only screen and(max-width: 1320px){
+    header{
+        padding:0 50px;
+    }
+
+   
+}
+@media only screen and (max-width: 1100){
+    header{
+        padding: 0 30px;
+    }
+
+}
+@media only screen and (max-width: 900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+    header  .logo{
+  position: relative;
+    }
+    .nav-bar{
+        height: 450px;
+        position: absolute;
+        top:80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        /* background: #9EB384; */
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: red;
+    }
+>>>>>>> 1f345c6 (okayy)
 }
 
 /* ketu mbaron CSS per Nav-bar, kujdes mos perdor emerimin e klaseve te njejta*/
