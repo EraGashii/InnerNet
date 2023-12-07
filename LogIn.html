@@ -13,8 +13,8 @@
        
         <nav class="nav">
           <i class="uil uil-bars navOpenBtn"></i>
-          <a href="#" class="logo">InsideOut</a>
-          <!--<a href="#" class="logo"><img src="image/InsideOut.png" width="80px"></a>-->
+          <!-- <a href="#" class="logo">InsideOut</a> -->
+          <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
           <ul class="nav-links">
             <i class="uil uil-times navCloseBtn"></i>
             <li><a href="Index.html">Home</a></li>
@@ -32,18 +32,19 @@
     
         </header><!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
     <div class="login-wrap">
+        <form  name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group"> 
-                        <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
+                        <label for="user" class="label" name="name">Username</label>
+                        <input id="user" type="text" name="name" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <label for="pass" class="label" name="password">Password</label>
+                        <input id="pass" type="password" class="input"  name="password" data-type="password">
                     </div>
                     <div class="group">
                         <input id="check" type="checkbox" class="check" checked>
@@ -71,8 +72,8 @@
                         <input id="pass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Email Address</label>
-                        <input id="pass" type="text" class="input">
+                        <label for="pass" class="label" name="address">Email Address</label>
+                        <input id="pass" type="text" name="address"class="input">
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="Sign Up">
@@ -84,16 +85,13 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </form>
+</div>
 <!-- footer-->
     <footer>
         <div class="footer_info">
             <div class="footer_width about">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
-                     Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
-                     laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
+                <p>If you are in a life threatening situation - don’t use this site. Call 988 to get immediate help</p>
           <div class="social-media">
             <ul>
                 <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
@@ -121,13 +119,11 @@
                         <span><i class="lni lni-map-marker"></i></span>
                         <p>
                             8368 Maywlower prishtina
-                            
-                        </p>
+                              </p>
                     </li>
                     <li>
                         <span><i class="lni lni-envelope"></i></span>
-                          <a href="">InnerNet@gmail.com</a>
-    
+                          <a href="">InnerNet@gmail.com</a> 
                     </li>
                     <li>
                         <span><i class="lni lni-phone"></i></span>
@@ -144,89 +140,127 @@
         </div>
     </footer>
     <script>
-      const email = document.getElementById("email");
-const password = document.getElementById("password"); 
-const form = document.getElementById("form");
-const msg = document.getElementById("msg");
+   function GEEKFORGEEKS(){
+	var name =document.forms.RegForm.Name.value;
+	var email =document.forms.RegForm.EMail.value;
+	var phone =document.forms.RegForm.Telephone.value;
+	var what =document.forms.RegForm.Subject.value;
+	var password =document.forms.RegForm.Password.value;
+	var address =document.forms.RegForm.Address.value;
 
+	//Javascript reGex for Email Validation.
+	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 
+	// Javascript reGex for Phone Number validation.
+	var regPhone=/^\d{10}$/;					 
+	// Javascript reGex for Name validation
+	var regName = /\d+$/g;						 
 
+	if (name == "" || regName.test(name)) {
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
 
-const validateEmail = (inputEmail)=> inputEmail.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-const validatePassword = (inputPassword) => inputPassword.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+	if (address == "") {
+		window.alert("Please enter your address.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" || !regEmail.test(email)) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (password == "") {
+		alert("Please enter your password");
+		password.focus();
+		return false;
+	}
 
+	if(password.length <6){
+		alert("Password should be atleast 6 character long");
+		password.focus();
+		return false;
 
+	}
+	if (phone == "" || !regPhone.test(phone)) {
+		alert("Please enter valid phone number.");
+		phone.focus();
+		return false;
+	}
 
+	if (what.selectedIndex == -1) {
+		alert("Please enter your course.");
+		what.focus();
+		return false;
+	}
 
-const generateError = (errorName, errorMsg) =>{
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
-    if(errorName == "email"){
-        emailError.innerText = errorMsg;    
-    }else if(errorName == "password"){
-        passwordError.innerText = errorMsg;
-    }
+	return true;
+} {
+	var name =
+		document.forms.RegForm.Name.value;
+	var email =
+		document.forms.RegForm.EMail.value;
+	var phone =
+		document.forms.RegForm.Subject.value;
+	var password =
+		document.forms.RegForm.Password.value;
+	var address =
+		document.forms.RegForm.Address.value;
+	//Javascript reGex for Email Validation.
+	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;									 
+	// Javascript reGex for Name validation
+	var regName = /\d+$/g;								 
+	
+
+	if (name == "" || regName.test(name)) {
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
+
+	if (address == "") {
+		window.alert("Please enter your address.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" || !regEmail.test(email)) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (password == "") {
+		alert("Please enter your password");
+		password.focus();
+		return false;
+	}
+
+	if(password.length <6){
+		alert("Password should be atleast 6 character long");
+		password.focus();
+		return false;
+
+	}
+	if (phone == "" || !regPhone.test(phone)) {
+		alert("Please enter valid phone number.");
+		phone.focus();
+		return false;
+	}
+
+	if (what.selectedIndex == -1) {
+		alert("Please enter your course.");
+		what.focus();
+		return false;
+	}
+
+	return true;
 }
 
-const formValidate = (inputEmail, inputPassword) =>{
-    if(!validateEmail(inputEmail)){
-        emailError = "please enter a valid email address";
-        generateError("email",emailError);
-        return;
-    }
-    if(!validatePassword(inputPassword)){
-        passwordError = "please enter correct password";
-        generateError(generateError("password",passwordError));
-        return;
-    }
-  
-}
-
-form.addEventListener("submit",(e) => {
-    e.preventDefault();
-    formValidate(email, password);
-});
-
-
-email.addEventListener("focusout", (e)=>{
-    if(!validateEmail(email)){
-        email.style.borderColor = "red";
-        generateError("email", "Please enter a valid email");
-        email.parentElement.classList.add("error");
-    }
-});
-
-password.addEventListener("focusout", (e)=>{
-    if(!validatePassword(password)){
-        password.style.borderColor = "red";
-        generateError("password", "Please enter a valid password");
-        password.parentElement.classList.add("error");
-    }
-});
-    </script>
-
-<script>
-    const nav = document.querySelector(".nav"),
-      searchIcon = document.querySelector("#searchIcon"),
-      navOpenBtn = document.querySelector(".navOpenBtn"),
-      navCloseBtn = document.querySelector(".navCloseBtn");
-    
-    searchIcon.addEventListener("click", () => {
-      nav.classList.toggle("openSearch");
-      nav.classList.remove("openNav");
-      if (nav.classList.contains("openSearch")) {
-        return searchIcon.classList.replace("uil-search", "uil-times");
-    }
-      searchIcon.classList.replace("uil-times", "uil-search");
-    });
-    
-    navOpenBtn.addEventListener("click", () => {
-      nav.classList.add("openNav");
-      nav.classList.remove("openSearch");
-      searchIcon.classList.replace("uil-times", "uil-search");
-    });
-    navCloseBtn.addEventListener("click", () => {
-      nav.classList.remove("openNav");
-    });</script>
+</script>
 </body>
 </html>
     
