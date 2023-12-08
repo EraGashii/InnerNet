@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/Login.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
     <header>
@@ -29,20 +27,20 @@
         </header>
 
         <!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
-        <form  name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">   
-    <div class="login-wrap">
+        <form name="RegForm" onsubmit="return validateForm()" method="post">
+           <div class="login-wrap">
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group"> 
-                        <label for="name" class="label" name="name">Username</label>
-                        <input id="name" type="text" name="name" class="input" required>
+                        <label for="signInName" class="label" name="name" >Username</label>
+                        <input id="signInName" type="text" name="signInName" class="input" >
                     </div>
                     <div class="group">
-                        <label for="pass" class="label" name="password">Password</label>
-                        <input id="pass" type="password" class="input"  name="password" data-type="password" required>
+                        <label for="signInPass" class="label" name="password">Password</label>
+                        <input id="signInPass" type="password" class="input"  name="password" data-type="password" >
                     </div>
                     <div class="group">
                         <input id="check" type="checkbox" class="check" checked>
@@ -59,19 +57,19 @@
                 <div class="sign-up-htm">
                     <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input" required>
+                        <input id="user" type="text" class="input" name="user" required>
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password" required>
+                        <label for="signUpPass" class="label">Password</label>
+                        <input id="signUpPass" type="password" class="input" name="password" data-type="password">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Repeat Password</label>
-                        <input id="pass" type="password" class="input" data-type="password" required>
+                        <label for="passRepeat" class="label">Repeat Password</label>
+                        <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" required>
                     </div>
                     <div class="group">
-                        <label for="pass" class="label" name="address">Email Address</label>
-                        <input id="pass" type="text" name="address"class="input" required>
+                        <label for="signUpAddress" class="label" >Email Address</label>
+                        <input id="signUpAddress" type="text" name="address"class="input" required>
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="Sign Up">
@@ -85,7 +83,6 @@
         </div>
     </div>
     </form>
-
 <!-- footer-->
     <footer>
         <div class="footer_info">
@@ -154,116 +151,46 @@
      nav.classList.remove("openNav");
     });
 
-//    log In
-   function GEEKFORGEEKS(){
-	var name =document.forms.RegForm.Name.value;
-	var email =document.forms.RegForm.EMail.value;
-	var phone =document.forms.RegForm.Telephone.value;
-	var what =document.forms.RegForm.Subject.value;
-	var password =document.forms.RegForm.Password.value;
-	var address =document.forms.RegForm.Address.value;
+// login
+function validateForm() {
+    var trimValue = function (element) {
+        return element.value.trim();
+    };
 
-	//Javascript reGex for Email Validation.
-	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 		 
-	// Javascript reGex for Name validation
-	var regName = /\d+$/g;						 
+    var checkValidity = function (value, regex, errorMessage, focusElement) {
+        if (!regex.test(value)) {
+            alert(errorMessage);
+            focusElement.focus();
+            return false;
+        }
+        return true;
+    };
 
-	if (name == "" || regName.test(name)) {
-		window.alert("Please enter your name properly.");
-		name.focus();
-		return false;
-	}
+    var signInName = trimValue(document.forms.RegForm.signInName);
+    var signInPass = trimValue(document.forms.RegForm.password);
+    var signUpUsername = trimValue(document.forms.RegForm.user);
+    var signUpPass = trimValue(document.forms.RegForm.password);  /
+    var passRepeat = trimValue(document.forms.RegForm.passRepeat);
+    var signUpAddress = trimValue(document.forms.RegForm.address);
 
-	if (address == "") {
-		window.alert("Please enter your address.");
-		address.focus();
-		return false;
-	}
-	
-	if (email == "" || !regEmail.test(email)) {
-		window.alert("Please enter a valid e-mail address.");
-		email.focus();
-		return false;
-	}
-	
-	if (password == "") {
-		alert("Please enter your password");
-		password.focus();
-		return false;
-	}
+    
+    var regSignInName = /^[a-zA-Z0-9_]+$/;
+    var regSignUpName = /^[a-zA-Z0-9_]+$/;
 
-	if(Password.length <6){
-		alert("Password should be atleast 6 character long");
-		Password.focus();
-		return false;
 
-	}
-	if (what.selectedIndex == -1) {
-		alert("Please enter your course.");
-		what.focus();
-		return false;
-	}
+    var regPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/;
 
-	return true;
-} {
-
-	var name =document.forms.RegForm.Name.value;
-	var email =document.forms.RegForm.EMail.value;
-	var phone =document.forms.RegForm.Subject.value;
-	var password =document.forms.RegForm.Password.value;
-	var address =document.forms.RegForm.Address.value;
-	//Javascript reGex for Email Validation.
-	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;									 
-	// Javascript reGex for Name validation
-	var regName = /\d+$/g;								 
-	
-
-	if (name == "" || regName.test(name)) {
-		window.alert("Please enter your name properly.");
-		name.focus();
-		return false;
-	}
-
-	if (address == "") {
-		window.alert("Please enter your address.");
-		address.focus();
-		return false;
-	}
-	
-	if (email == "" || !regEmail.test(email)) {
-		window.alert("Please enter a valid e-mail address.");
-		email.focus();
-		return false;
-	}
-	
-	if (password == "") {
-		alert("Please enter your password");
-		password.focus();
-		return false;
-	}
-
-	if(password.length <6){
-		alert("Password should be atleast 6 character long");
-		password.focus();
-		return false;
-
-	}
-	if (phone == "" || !regPhone.test(phone)) {
-		alert("Please enter valid phone number.");
-		phone.focus();
-		return false;
-	}
-
-	if (what.selectedIndex == -1) {
-		alert("Please enter your course.");
-		what.focus();
-		return false;
-	}
-
-	return true;
+    return (
+        checkValidity(signInName, regSignInName, "Please enter a valid alphanumeric username for sign-in.", document.forms.RegForm.signInName) &&
+        checkValidity(signInPass, regPassword, "Please enter a valid and strong password for sign-in.", document.forms.RegForm.password) &&
+        checkValidity(signUpUsername, regSignUpName, "Please enter a valid alphanumeric username for sign-up.", document.forms.RegForm.user) &&
+        checkValidity(signUpPass, regPassword, "Please enter a valid and strong password for sign-up.", document.forms.RegForm.password) &&
+        checkValidity(signUpPass, passRepeat === signUpPass, "Passwords do not match.", document.forms.RegForm.passRepeat) &&
+        checkValidity(signUpAddress, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Please enter a valid email address for sign-up.", document.forms.RegForm.address)
+    );
 }
 
-</script>
+ </script> 
 </body>
 </html>
     
