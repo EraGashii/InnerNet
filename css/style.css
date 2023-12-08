@@ -286,10 +286,7 @@ box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
 cursor: pointer;
 transition: 0.5s;
 }
-
-
 h3{
-
 font-size: 20px;
 font-weight: 600;
 color: #9EB384;
@@ -303,25 +300,13 @@ letter-spacing: 0.03em;
 }
 
 .icon-wrapper {
-
-background-color: #9EB384;
-
 color: #700808;
-
-background-color: #5e8e23;
-
-
 background-color: #9EB384;
-
 position: relative;
  margin: auto;
 font-size: 30px;
 height: 2.5em;
 width: 2.5em;
-
-color: #ffffff;
-
-
 border-radius: 50%;
 display: grid;
  place-items: center;
@@ -455,34 +440,12 @@ section {
       color: #9EB384 ;
      
     }
-
-
  
-  /* veqqq po provojjjj */
-  @media screen and (max-width:320px){
-  .about-us{
- width: auto;
-  }
-  .about{
-    width: auto;
-  }
-  } 
-
-  @media screen and (min-width:321px) and (max-width:768px){
-
-   }
-
-
-
-@media screen and (min-width:769px){
-
-}
-
-
 .container {
   max-width: 1200px;
   width: 95%;
   margin: 5%;
+
 }
 .slider-wrapper {
   position: relative;

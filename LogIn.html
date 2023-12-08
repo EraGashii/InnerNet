@@ -6,14 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/Login.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
     <header>
-       
         <nav class="nav">
           <i class="uil uil-bars navOpenBtn"></i>
-          <!-- <a href="#" class="logo">InsideOut</a> -->
           <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
           <ul class="nav-links">
             <i class="uil uil-times navCloseBtn"></i>
@@ -23,49 +21,71 @@
             <li><a href="contact.html">Contact us</a></li>
             <li><a href="#">Log in</a></li>
           </ul>
-          <i class="uil uil-search search-icon" id="searchIcon"></i>
           <div class="search-box">
             <i class="uil uil-search search-icon"></i>
             <input type="text" placeholder="Search here..." />
           </div>
         </nav>
-    
-        </header><!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
-    <!--start of login -->
-    <div class="container">
-        <div class="form-box">
-            <h1 id="title">Sign Up</h1>
-            <form action="#" id="form"  method="post">
-                <div class="input-group">
-                    <div class="input-field" id="nameField">
-                    <i class="lni lni-user"></i>
-                    <input type="text" placeholder="username"  name="username" required>
-                    <div class="error"></div>
+        </header>
+
+        <!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
+        <form  name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post">   
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group"> 
+                        <label for="name" class="label" name="name">Username</label>
+                        <input id="name" type="text" name="name" class="input" required>
                     </div>
-
-                    <div class="input-field">
-                        <i class="lni lni-envelope"></i>
-                        <input type="email" placeholder="email" name="email" required>
-                        <div class="error"></div>
-                        </div>
-
-                        <div class="input-field">
-                            <i class="lni lni-lock"></i>
-                            <input type="password" placeholder="password" name="password" required>
-                            <div class="error"></div>
-                            </div>
-                            <p>Lost password <a href="">Click here</a></p>
+                    <div class="group">
+                        <label for="pass" class="label" name="password">Password</label>
+                        <input id="pass" type="password" class="input"  name="password" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">Forgot Password?</a>
+                    </div>
                 </div>
-                <div class="btn-field">
-                    <button type="submit" id="signupBtn">Sign up</button>
-                    <button type="submit" id="signinBtn" class="disable">Sign in</button>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="user" type="text" class="input" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Repeat Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label" name="address">Email Address</label>
+                        <input id="pass" type="text" name="address"class="input" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already Member?</a>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+    </form>
 
-   
-    <!--end of login-->
 <!-- footer-->
     <footer>
         <div class="footer_info">
@@ -84,122 +104,165 @@
                 <h2>Quick Link</h2>
                 <ul class="other_pages">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">About</a></li>
-                   
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="Features.html">Features</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="LogIn.html">Log in</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
                 </ul>
             </div>
+            
             <div class="footer_width contact">
                 <h2>Contact</h2>
                 <ul>
                     <li>
                         <span><i class="lni lni-map-marker"></i></span>
-                        <p>
-                            8368 Maywlower prishtina
-                              </p>
+                        <a href="">
+                         Rruga Drini Bardhe -Kline  
+                            8368   
+                        </a>
                     </li>
                     <li>
                         <span><i class="lni lni-envelope"></i></span>
-                          <a href="">InnerNet@gmail.com</a> 
+                          <a href="">InsideOut@gmail.com</a>
                     </li>
                     <li>
                         <span><i class="lni lni-phone"></i></span>
-                       <a href="">045,3043,2</a>
-                            
-                        
+                       <a href="">044-489-488</a>
                     </li>
-                </ul>
-            </div>
-    
+                    <li>
+                      <span><i class="lni lni-phone"></i></span>
+                      <a href="">045-304-302</a>           
+                   </li>
+               </ul>
+           </div>
         </div>
         <div class="copy-right">
-            <p>2023 @ InnerNet</p>
+            <p>2023 @InsideOut</p>
         </div>
     </footer>
     <script>
-        let signupBtn = document.getElementById('signupBtn');
-        let signinBtn = document.getElementById('signinBtn');
-        let nameField = document.getElementById('nameField');
-        let title =document.getElementById('title');
+        // navbar
+        const nav = document.querySelector(".nav"),
+     navOpenBtn = document.querySelector(".navOpenBtn"),
+     navCloseBtn = document.querySelector(".navCloseBtn");
+   
+   navOpenBtn.addEventListener("click", () => {
+     nav.classList.add("openNav");
+     searchIcon.classList.replace("uil-times");
+   });
+   navCloseBtn.addEventListener("click", () => {
+     nav.classList.remove("openNav");
+    });
 
-        signinBtn.onclick = function(){
-            nameField.style.maxHeight = "0";
-            title.innerHTML = "Sign in";
-            signupBtn.classList.add("disable");
-            signinBtn.classList.remove("disable");
-        }
+//    log In
+   function GEEKFORGEEKS(){
+	var name =document.forms.RegForm.Name.value;
+	var email =document.forms.RegForm.EMail.value;
+	var phone =document.forms.RegForm.Telephone.value;
+	var what =document.forms.RegForm.Subject.value;
+	var password =document.forms.RegForm.Password.value;
+	var address =document.forms.RegForm.Address.value;
 
-        signupBtn.onclick = function(){
-            nameField.style.maxHeight = "60px";
-            title.innerHTML = "Sign up";
-            signupBtn.classList.remove("disable");
-            signinBtn.classList.add("disable");
-        }
-        
-        //per validim
-        const form = document.getElementById('form');
-        const username = document.getElementById('username');
-        const email = document.getElementById('email');
-        const password = document.getElementById('password')
+	//Javascript reGex for Email Validation.
+	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 		 
+	// Javascript reGex for Name validation
+	var regName = /\d+$/g;						 
 
-        form.addEventListener('submit', (e) =>{
-            e.preventDefault();
-            validateInputs();
-        });
-     
-        const setError = (element,message) =>{
-            const inputControl = element.parentElement;
-            const errorDisplay = inputControl.querySelector('.error')
+	if (name == "" || regName.test(name)) {
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
 
+	if (address == "") {
+		window.alert("Please enter your address.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" || !regEmail.test(email)) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (password == "") {
+		alert("Please enter your password");
+		password.focus();
+		return false;
+	}
 
-            errorDisplay.innerText = '';
-            inputControl.classList.add('success');
-            inputControl.classList.remove('error');
-        }
-          const isValidEmail = email =>{
-            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
-          }
+	if(Password.length <6){
+		alert("Password should be atleast 6 character long");
+		Password.focus();
+		return false;
 
+	}
+	if (what.selectedIndex == -1) {
+		alert("Please enter your course.");
+		what.focus();
+		return false;
+	}
 
+	return true;
+} {
 
-        const setSuccess = element =>{
-            const inputControl = element.parentElement;
-        }
+	var name =document.forms.RegForm.Name.value;
+	var email =document.forms.RegForm.EMail.value;
+	var phone =document.forms.RegForm.Subject.value;
+	var password =document.forms.RegForm.Password.value;
+	var address =document.forms.RegForm.Address.value;
+	//Javascript reGex for Email Validation.
+	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;									 
+	// Javascript reGex for Name validation
+	var regName = /\d+$/g;								 
+	
 
+	if (name == "" || regName.test(name)) {
+		window.alert("Please enter your name properly.");
+		name.focus();
+		return false;
+	}
 
-        const validateInputs =()=>{
-            const usernameValue = username.value.trim();
-            const emailValue = email.value.trim();
-            const passwordValue = password.value.trim();
+	if (address == "") {
+		window.alert("Please enter your address.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" || !regEmail.test(email)) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (password == "") {
+		alert("Please enter your password");
+		password.focus();
+		return false;
+	}
 
-            if(usernameValue === ''){
-                setError(username,"username is required");
-            }else{
-                  setSuccess(username);
-            }
+	if(password.length <6){
+		alert("Password should be atleast 6 character long");
+		password.focus();
+		return false;
 
-            if(emailValue === ''){
-                setError(email,'Eamil is required');
-            }
-            else{
-                setSuccess(email)
-            }
-            
+	}
+	if (phone == "" || !regPhone.test(phone)) {
+		alert("Please enter valid phone number.");
+		phone.focus();
+		return false;
+	}
 
-            if(passwordValue===''){
-                setError(password, "password is required");
-            }
-            else if(passwordValue.length<8){
-                setError(password, 'Password must be at least 8 character');
-            }
-            else{
-                setSuccess(password)
-            }
-        }
-    </script>
+	if (what.selectedIndex == -1) {
+		alert("Please enter your course.");
+		what.focus();
+		return false;
+	}
+
+	return true;
+}
+
+</script>
 </body>
 </html>
-    
