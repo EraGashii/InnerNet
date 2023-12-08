@@ -586,6 +586,8 @@ textarea.input {
 @media (max-width: 480px) {
   .container {
     padding: 1.5rem;
+    margin-top: 20%;
+ 
   }
 
   .contact-info:before {
