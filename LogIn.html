@@ -6,15 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/Login.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> 
 </head>
 <body>
     <header>
        
         <nav class="nav">
           <i class="uil uil-bars navOpenBtn"></i>
-          <a href="#" class="logo">InsideOut</a>
-          <!--<a href="#" class="logo"><img src="image/InsideOut.png" width="80px"></a>-->
+          <!-- <a href="#" class="logo">InsideOut</a> -->
+          <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
           <ul class="nav-links">
             <i class="uil uil-times navCloseBtn"></i>
             <li><a href="Index.html">Home</a></li>
@@ -31,69 +31,46 @@
         </nav>
     
         </header><!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
-    <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    <div class="group"> 
-                        <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
+    <!--start of login -->
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="#" id="form"  method="post">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                    <i class="lni lni-user"></i>
+                    <input type="text" placeholder="username"  name="username" required>
+                    <div class="error"></div>
                     </div>
-                    <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign In">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <a href="#forgot">Forgot Password?</a>
-                    </div>
+
+                    <div class="input-field">
+                        <i class="lni lni-envelope"></i>
+                        <input type="email" placeholder="email" name="email" required>
+                        <div class="error"></div>
+                        </div>
+
+                        <div class="input-field">
+                            <i class="lni lni-lock"></i>
+                            <input type="password" placeholder="password" name="password" required>
+                            <div class="error"></div>
+                            </div>
+                            <p>Lost password <a href="">Click here</a></p>
                 </div>
-                <div class="sign-up-htm">
-                    <div class="group">
-                        <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Repeat Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Email Address</label>
-                        <input id="pass" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign Up">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <label for="tab-1">Already Member?</a>
-                    </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Sign up</button>
+                    <button type="submit" id="signinBtn" class="disable">Sign in</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
+   
+    <!--end of login-->
 <!-- footer-->
     <footer>
         <div class="footer_info">
             <div class="footer_width about">
-                <h2>About</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.\
-                     Doloremque iure molestias vitae alias harum. Autem, ullam voluptatum. Accusamus incidunt officia eveniet tenetur illo pariatur
-                     laboriosam ipsam harum consequuntur perspiciatis. Modi.</p>
+                <p>If you are in a life threatening situation - don’t use this site. Call 988 to get immediate help</p>
           <div class="social-media">
             <ul>
                 <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
@@ -121,13 +98,11 @@
                         <span><i class="lni lni-map-marker"></i></span>
                         <p>
                             8368 Maywlower prishtina
-                            
-                        </p>
+                              </p>
                     </li>
                     <li>
                         <span><i class="lni lni-envelope"></i></span>
-                          <a href="">InnerNet@gmail.com</a>
-    
+                          <a href="">InnerNet@gmail.com</a> 
                     </li>
                     <li>
                         <span><i class="lni lni-phone"></i></span>
@@ -135,7 +110,7 @@
                             
                         
                     </li>
-                </ul>o
+                </ul>
             </div>
     
         </div>
@@ -144,90 +119,87 @@
         </div>
     </footer>
     <script>
-      const email = document.getElementById("email");
-const password = document.getElementById("password"); 
-const form = document.getElementById("form");
-const msg = document.getElementById("msg");
+        let signupBtn = document.getElementById('signupBtn');
+        let signinBtn = document.getElementById('signinBtn');
+        let nameField = document.getElementById('nameField');
+        let title =document.getElementById('title');
+
+        signinBtn.onclick = function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign in";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+        
+        //per validim
+        const form = document.getElementById('form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password')
+
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            validateInputs();
+        });
+     
+        const setError = (element,message) =>{
+            const inputControl = element.parentElement;
+            const errorDisplay = inputControl.querySelector('.error')
+
+
+            errorDisplay.innerText = '';
+            inputControl.classList.add('success');
+            inputControl.classList.remove('error');
+        }
+          const isValidEmail = email =>{
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+          }
 
 
 
-const validateEmail = (inputEmail)=> inputEmail.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        const setSuccess = element =>{
+            const inputControl = element.parentElement;
+        }
 
 
-const validatePassword = (inputPassword) => inputPassword.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+        const validateInputs =()=>{
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
 
+            if(usernameValue === ''){
+                setError(username,"username is required");
+            }else{
+                  setSuccess(username);
+            }
 
+            if(emailValue === ''){
+                setError(email,'Eamil is required');
+            }
+            else{
+                setSuccess(email)
+            }
+            
 
-
-const generateError = (errorName, errorMsg) =>{
-    const emailError = document.getElementById("emailError");
-    const passwordError = document.getElementById("passwordError");
-    if(errorName == "email"){
-        emailError.innerText = errorMsg;    
-    }else if(errorName == "password"){
-        passwordError.innerText = errorMsg;
-    }
-}
-
-const formValidate = (inputEmail, inputPassword) =>{
-    if(!validateEmail(inputEmail)){
-        emailError = "please enter a valid email address";
-        generateError("email",emailError);
-        return;
-    }
-    if(!validatePassword(inputPassword)){
-        passwordError = "please enter correct password";
-        generateError(generateError("password",passwordError));
-        return;
-    }
-  
-}
-
-form.addEventListener("submit",(e) => {
-    e.preventDefault();
-    formValidate(email, password);
-});
-
-
-email.addEventListener("focusout", (e)=>{
-    if(!validateEmail(email)){
-        email.style.borderColor = "red";
-        generateError("email", "Please enter a valid email");
-        email.parentElement.classList.add("error");
-    }
-});
-
-password.addEventListener("focusout", (e)=>{
-    if(!validatePassword(password)){
-        password.style.borderColor = "red";
-        generateError("password", "Please enter a valid password");
-        password.parentElement.classList.add("error");
-    }
-});
+            if(passwordValue===''){
+                setError(password, "password is required");
+            }
+            else if(passwordValue.length<8){
+                setError(password, 'Password must be at least 8 character');
+            }
+            else{
+                setSuccess(password)
+            }
+        }
     </script>
-
-<script>
-    const nav = document.querySelector(".nav"),
-      searchIcon = document.querySelector("#searchIcon"),
-      navOpenBtn = document.querySelector(".navOpenBtn"),
-      navCloseBtn = document.querySelector(".navCloseBtn");
-    
-    searchIcon.addEventListener("click", () => {
-      nav.classList.toggle("openSearch");
-      nav.classList.remove("openNav");
-      if (nav.classList.contains("openSearch")) {
-        return searchIcon.classList.replace("uil-search", "uil-times");
-      }
-      searchIcon.classList.replace("uil-times", "uil-search");
-    });
-    
-    navOpenBtn.addEventListener("click", () => {
-      nav.classList.add("openNav");
-      nav.classList.remove("openSearch");
-      searchIcon.classList.replace("uil-times", "uil-search");
-    });
-    navCloseBtn.addEventListener("click", () => {
-      nav.classList.remove("openNav");
-    });</script>
 </body>
 </html>
+    

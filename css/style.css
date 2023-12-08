@@ -3,32 +3,13 @@
 #CEDEBD 
 9EB384
 435334
-*/
-
-/* Start of Navbar CSS*/
-*{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    box-sizing: border-box;
-}
-body{
-    background: #fefefe;
-}
-
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
-body {
-  background: #f0faff;
 }
 
 .nav {
@@ -307,7 +288,11 @@ box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
 cursor: pointer;
 transition: 0.5s;
 }
+<<<<<<< HEAD
 h3 {
+=======
+h3{
+>>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
 font-size: 20px;
 font-weight: 600;
 color: #9EB384;
@@ -321,13 +306,21 @@ letter-spacing: 0.03em;
 }
 
 .icon-wrapper {
+<<<<<<< HEAD
 background-color: #9EB384;
+=======
+color: #700808;
+background-color: #5e8e23;
+>>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
 position: relative;
 margin: auto;
 font-size: 30px;
 height: 2.5em;
 width: 2.5em;
+<<<<<<< HEAD
 color: #ffffff;
+=======
+>>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
 border-radius: 50%;
 display: grid;
 place-items: center;
@@ -469,7 +462,25 @@ section {
       color: #9EB384 ;
      
     }
+<<<<<<< HEAD
+=======
+ 
+  /* veqqq po provojjjj */
+  @media screen and (max-width:320px){
+  .about-us{
+ width: auto;
+  }
+  .about{
+    width: auto;
+  }
+  } 
+
+  @media screen and (min-width:321px) and (max-width:768px){
+
+   }
+>>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
 
 
+@media screen and (min-width:769px){
 
-      
+}
