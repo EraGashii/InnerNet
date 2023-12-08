@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link rel="stylesheet" href="css/Login.css">
 </head>
 <body>
     <header> 
         <nav class="nav">
           <i class="uil uil-bars navOpenBtn"></i>
-          <!-- <a href="#" class="logo">InsideOut</a> -->
           <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
           <ul class="nav-links">
             <i class="uil uil-times navCloseBtn"></i>
-            <li><a href="Index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="Features.html">Features</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact us</a></li>
-            <li><a href="#">Log in</a></li>
+            <li><a href="LogIn.html">Log in</a></li>
           </ul>
         </nav>
       </header>
-    
 
         <!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
         <form name="RegForm" onsubmit="return validateForm()" method="post">
@@ -136,7 +136,7 @@
         </div>
     </footer>
     <script>
-         const nav = document.querySelector(".nav"),
+          const nav = document.querySelector(".nav"),
      navOpenBtn = document.querySelector(".navOpenBtn"),
      navCloseBtn = document.querySelector(".navCloseBtn");
    
@@ -147,7 +147,6 @@
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");
     });
-    
 
 
 // login
@@ -168,7 +167,7 @@ function validateForm() {
     var signInName = trimValue(document.forms.RegForm.signInName);
     var signInPass = trimValue(document.forms.RegForm.password);
     var signUpUsername = trimValue(document.forms.RegForm.user);
-    var signUpPass = trimValue(document.forms.RegForm.password);  /
+    var signUpPass = trimValue(document.forms.RegForm.password);  
     var passRepeat = trimValue(document.forms.RegForm.passRepeat);
     var signUpAddress = trimValue(document.forms.RegForm.address);
 
