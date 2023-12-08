@@ -441,30 +441,11 @@ section {
      
     }
  
-  /* veqqq po provojjjj */
-  @media screen and (max-width:320px){
-  .about-us{
- width: auto;
-  }
-  .about{
-    width: auto;
-  }
-  } 
-
-  @media screen and (min-width:321px) and (max-width:768px){
-
-   }
-
-
-@media screen and (min-width:769px){
-
-}
-
-
 .container {
   max-width: 1200px;
   width: 95%;
   margin: 5%;
+
 }
 .slider-wrapper {
   position: relative;
