@@ -11,7 +11,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 .nav {
   position: fixed;
   top: 0;
@@ -260,9 +259,9 @@ footer{
 
 }
 
-
+/* psychologist */
 .heading{
-  padding-top:30px;
+  padding-top:10%;
   padding-bottom: 30px;
   text-align: center;
 }
@@ -270,13 +269,13 @@ footer{
   color:#435334;
 }
 
-.doctors .box-container{
+.psychologist .box-container{
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
   gap: 3rem;
 }
 
-.doctors .box-container .box{
+.psychologist .box-container .box{
   text-align: center;
   background: #fff;
   border-radius: .5rem;
@@ -286,7 +285,7 @@ footer{
 
 }
 
-.doctors .box-container .box img{
+.psychologist .box-container .box img{
   height: 20rem;
   border: .2rem solid #9EB384;
   border-radius: .5rem;
@@ -294,23 +293,23 @@ footer{
   margin-bottom: 1rem;
 }
 
-.doctors .box-container .box img{
+.psychologist .box-container .box img{
   color: black;
   font-size: 2.5rem;
 
 }
 
-.doctors .box-container .box span{
+.psychologist .box-container .box span{
   color: #9EB384;
   font-size: 1.5rem;
 }
 
 
-.doctors .box-container .box .share{
+.psychologist .box-container .box .share{
   padding-top: 2rem;
 }
 
-.doctors .box-container .box .share a{
+.psychologist .box-container .box .share a{
   height: 5rem;
   width: 5rem;
   line-height: 4.5rem;
@@ -322,7 +321,7 @@ footer{
 
 }
 
-.doctors .box-container .box .share a:hover{
+.psychologist .box-container .box .share a:hover{
   background: #9EB384;
   color: #fff;
   box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);

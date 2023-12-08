@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="css/aboutUs.css">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
@@ -13,8 +12,7 @@
   <header> 
     <nav class="nav">
       <i class="uil uil-bars navOpenBtn"></i>
-      <!-- <a href="#" class="logo">InsideOut</a> -->
-   <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
+     <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
       <ul class="nav-links">
         <i class="uil uil-times navCloseBtn"></i>
         <li><a href="#">Home</a></li>
@@ -52,63 +50,56 @@
         <div class="footer_width link">
             <h2>Quick Link</h2>
             <ul class="other_pages">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">About</a></li>
-               
-                <li><a href="">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Features.html">Features</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="LogIn.html">Log in</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+          </ul>
         </div>
         <div class="footer_width contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>
-                    <span><i class="lni lni-map-marker"></i></span>
-                    <p>
-                        8368 Maywlower prishtina               
-                    </p>
-                </li>
-                <li>
-                    <span><i class="lni lni-envelope"></i></span>
-                      <a href="">InnerNet@gmail.com</a>
-
-                </li>
-                <li>
-                    <span><i class="lni lni-phone"></i></span>
-                   <a href="">045,3043,2</a>
-                </li>
-            </ul>o
-        </div>
+          <h2>Contact</h2>
+          <ul>
+              <li>
+                  <span><i class="lni lni-map-marker"></i></span>
+                  <a href="">
+                   Rruga Drini Bardhe -Kline  
+                      8368   
+                  </a>
+              </li>
+              <li>
+                  <span><i class="lni lni-envelope"></i></span>
+                    <a href="">InsideOut@gmail.com</a>
+              </li>
+              <li>
+                  <span><i class="lni lni-phone"></i></span>
+                 <a href="">044-489-488</a>
+              </li>
+              <li>
+                <span><i class="lni lni-phone"></i></span>
+                <a href="">045-304-302</a>           
+             </li>
+         </ul>
+     </div>
 
     </div>
     <div class="copy-right">
-        <p>2023 @ InnerNet</p>
+        <p>2023 @InsideOut</p>
     </div>
 </footer>
 <script>
-  const nav = document.querySelector(".nav"),
-    searchIcon = document.querySelector("#searchIcon"),
-    navOpenBtn = document.querySelector(".navOpenBtn"),
-    navCloseBtn = document.querySelector(".navCloseBtn");
-  
-  searchIcon.addEventListener("click", () => {
-    nav.classList.toggle("openSearch");
-    nav.classList.remove("openNav");
-    if (nav.classList.contains("openSearch")) {
-      return searchIcon.classList.replace("uil-search", "uil-times");
-    }
-    searchIcon.classList.replace("uil-times", "uil-search");
-  });
-  
-  navOpenBtn.addEventListener("click", () => {
-    nav.classList.add("openNav");
-    nav.classList.remove("openSearch");
-    searchIcon.classList.replace("uil-times", "uil-search");
-  });
-  navCloseBtn.addEventListener("click", () => {
-    nav.classList.remove("openNav");
-  });</script>
+    const nav = document.querySelector(".nav"),
+     navOpenBtn = document.querySelector(".navOpenBtn"),
+     navCloseBtn = document.querySelector(".navCloseBtn");
+   
+   navOpenBtn.addEventListener("click", () => {
+     nav.classList.add("openNav");
+     searchIcon.classList.replace("uil-times");
+   });
+   navCloseBtn.addEventListener("click", () => {
+     nav.classList.remove("openNav");
+    });
+  </script>
 
 </body>
-</html>
+</html> 

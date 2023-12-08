@@ -22,14 +22,9 @@
         <li><a href="contact.html">Contact us</a></li>
         <li><a href="LogIn.html">Log in</a></li>
       </ul>
-      <!-- <i class="uil uil-search search-icon" id="searchIcon"></i>
-      <div class="search-box">
-        <i class="uil uil-search search-icon"></i>
-        <input type="text" placeholder="Search here..." />
-      </div> -->
     </nav>
   </header>
-  <!-- navbar ka me permbajt logo about edhe contact us-->
+
   <!--about us link-->
   <section class="about-us">
     <div class="about">
@@ -37,7 +32,7 @@
       <div class="text">
         <h2 style="color:#435334;">InsideOut</h2>
         <h5>Online therapy & <span>Designer</span></h5>
-          <p>Join over 4,400,000 people who decided to get help and get happy with InsideOut.</p>
+          <p>Join over 1,000 people who decided to get help and get happy with InsideOut.</p>
         <div class="data">
         <a href="about.html" class="hire">Read more</a>
         </div>
@@ -149,6 +144,34 @@
         <p>Solved cases</p>
     </div>
 </section>
+
+<div class="container">
+  <div class="slider-wrapper">
+    <button id="prev-slide" class="slide-button material-symbols-rounded">
+   <
+    </button>
+    <ul class="image-list">
+      <img class="image-item" src="image/slider5.jpeg" alt="img-4" />
+      <img class="image-item" src="image/slider4.jpeg" alt="img-1" />
+      <img class="image-item" src="image/slider2.jpg" alt="img-2" />
+      <img class="image-item" src="image/slider3.jpeg" alt="img-3" />
+      <img class="image-item" src="image/slider6.jpeg" alt="img-5" />
+      <img class="image-item" src="image/slider5.jpeg" alt="img-4" />
+      <img class="image-item" src="image/slider4.jpeg" alt="img-1" />
+      <img class="image-item" src="image/slider2.jpg" alt="img-2" />
+      <img class="image-item" src="image/slider3.jpeg" alt="img-3" />
+      <img class="image-item" src="image/slider6.jpeg" alt="img-5" />
+    </ul>
+    <button id="next-slide" class="slide-button material-symbols-rounded">
+      >
+    </button>
+  </div>
+  <div class="slider-scrollbar">
+    <div class="scrollbar-track">
+      <div class="scrollbar-thumb"></div>
+    </div>
+  </div>
+</div>
 <!--icon section end-->
 <!-- end-->
   <footer>
@@ -166,13 +189,12 @@
             <div class="footer_width link">
                 <h2>Quick Link</h2>
                 <ul class="other_pages">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">About</a></li>
-                   
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Features.html">Features</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="LogIn.html">Log in</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+              </ul>
             </div>
             <div class="footer_width contact">
                 <h2>Contact</h2>
@@ -186,7 +208,7 @@
                     </li>
                     <li>
                         <span><i class="lni lni-envelope"></i></span>
-                          <a href="">InnerNet@gmail.com</a>
+                          <a href="">InsideOut@gmail.com</a>
                     </li>
                     <li>
                         <span><i class="lni lni-phone"></i></span>
@@ -194,38 +216,97 @@
                     </li>
                     <li>
                       <span><i class="lni lni-phone"></i></span>
-                      <a href="">045,3043,2</a>           
+                      <a href="">045-304-302</a>           
                    </li>
                </ul>
            </div>
-   
        </div>
        <div class="copy-right">
-           <p style="color: white;">2023 @ InnerNet</p>
+           <p style="color: white;">2023 @InsideOut</p>
        </div>
    </footer>
    <script>
    const nav = document.querySelector(".nav"),
-     searchIcon = document.querySelector("#searchIcon"),
      navOpenBtn = document.querySelector(".navOpenBtn"),
      navCloseBtn = document.querySelector(".navCloseBtn");
    
-   searchIcon.addEventListener("click", () => {
-     nav.classList.toggle("openSearch");
-     nav.classList.remove("openNav");
-     if (nav.classList.contains("openSearch")) {
-       return searchIcon.classList.replace("uil-search", "uil-times");
-     }
-     searchIcon.classList.replace("uil-times", "uil-search");
-   });
-   
    navOpenBtn.addEventListener("click", () => {
      nav.classList.add("openNav");
-     nav.classList.remove("openSearch");
-     searchIcon.classList.replace("uil-times", "uil-search");
+     searchIcon.classList.replace("uil-times");
    });
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");
-    });</script>
+    });
+    
+  //  slidershow
+    const initSlider = () => {
+    const imageList = document.querySelector(".slider-wrapper .image-list");
+    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+        
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+            
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
+        }
+
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+     // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
+    </script>
 </body>
 </html>
