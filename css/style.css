@@ -286,11 +286,10 @@ box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
 cursor: pointer;
 transition: 0.5s;
 }
-<<<<<<< HEAD
-h3 {
-=======
+
+
 h3{
->>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
+
 font-size: 20px;
 font-weight: 600;
 color: #9EB384;
@@ -304,25 +303,25 @@ letter-spacing: 0.03em;
 }
 
 .icon-wrapper {
-<<<<<<< HEAD
+
 background-color: #9EB384;
-=======
+
 color: #700808;
-<<<<<<< HEAD
+
 background-color: #5e8e23;
->>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
-=======
+
+
 background-color: #9EB384;
->>>>>>> 433e242cf993b4173b871f8ead9b38882e607622
+
 position: relative;
  margin: auto;
 font-size: 30px;
 height: 2.5em;
 width: 2.5em;
-<<<<<<< HEAD
+
 color: #ffffff;
-=======
->>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
+
+
 border-radius: 50%;
 display: grid;
  place-items: center;
@@ -456,8 +455,8 @@ section {
       color: #9EB384 ;
      
     }
-<<<<<<< HEAD
-=======
+
+
  
   /* veqqq po provojjjj */
   @media screen and (max-width:320px){
@@ -472,7 +471,7 @@ section {
   @media screen and (min-width:321px) and (max-width:768px){
 
    }
->>>>>>> 7240a12d8341f2f28ee06299ca4337a94c75427b
+
 
 
 @media screen and (min-width:769px){
