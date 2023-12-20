@@ -33,7 +33,7 @@
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group"> 
-                        <label for="signInName" class="label" name="name" >Username</label>
+                        <label for="signInName" class="label" name="name" required >Username</label>
                         <input id="signInName" type="text" name="signInName" class="input" >
                     </div>
                     <div class="group">
@@ -55,7 +55,7 @@
                 <div class="sign-up-htm">
                     <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input" name="user" required>
+                        <input id="user" type="text" class="input" name="user">
                     </div>
                     <div class="group">
                         <label for="signUpPass" class="label">Password</label>
@@ -63,11 +63,11 @@
                     </div>
                     <div class="group">
                         <label for="passRepeat" class="label">Repeat Password</label>
-                        <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" required>
+                        <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat">
                     </div>
                     <div class="group">
                         <label for="signUpAddress" class="label" >Email Address</label>
-                        <input id="signUpAddress" type="text" name="address"class="input" required>
+                        <input id="signUpAddress" type="text" name="address"class="input">
                     </div>
                     <div class="group">
                         <input type="submit" class="button" value="Sign Up">
@@ -158,9 +158,9 @@ function validateForm() {
         if (!regex.test(value)) {
             alert(errorMessage);
             focusElement.focus();
-            return false;
+            return;
         }
-        return true;
+        return;
     };
 
     var signInName = trimValue(document.forms.RegForm.signInName);
@@ -175,7 +175,7 @@ function validateForm() {
     var regSignUpName = /^[a-zA-Z0-9_]+$/;
 
 
-    var regPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{6,}$/;
+    var regPassword = /^[A-Za-z]{6}$/;
 
     return (
         checkValidity(signInName, regSignInName, "Please enter a valid alphanumeric username for sign-in.", document.forms.RegForm.signInName) &&
