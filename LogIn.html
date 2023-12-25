@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <!-- <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> -->
     <link rel="stylesheet" href="css/Login.css">
 </head>
 <body>
@@ -26,61 +26,67 @@
 
         <!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
         <form name="RegForm" onsubmit="return validateForm()" method="post">
-           <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    <div class="group"> 
-                        <label for="signInName" class="label" name="name" required >Username</label>
-                        <input id="signInName" type="text" name="signInName" class="input" >
-                    </div>
-                    <div class="group">
-                        <label for="signInPass" class="label" name="password">Password</label>
-                        <input id="signInPass" type="password" class="input"  name="password" data-type="password" >
-                    </div>
-                    <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign In">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <a href="#forgot">Forgot Password?</a>
-                    </div>
-                </div>
-                <div class="sign-up-htm">
-                    <div class="group">
-                        <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input" name="user">
-                    </div>
-                    <div class="group">
-                        <label for="signUpPass" class="label">Password</label>
-                        <input id="signUpPass" type="password" class="input" name="password" data-type="password">
-                    </div>
-                    <div class="group">
-                        <label for="passRepeat" class="label">Repeat Password</label>
-                        <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat">
-                    </div>
-                    <div class="group">
-                        <label for="signUpAddress" class="label" >Email Address</label>
-                        <input id="signUpAddress" type="text" name="address"class="input">
-                    </div>
-                    <div class="group">
-                        <input type="submit" class="button" value="Sign Up">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <label for="tab-1">Already Member?</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>
+            <div class="login-wrap">
+         <div class="login-html">
+             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
+             <div class="login-form">
+                 <div class="sign-in-htm">
+                     <div class="group"> 
+                         <label for="signInName" class="label" name="name"  >Username</label>
+                         <!-- <input id="signInName" type="text" name="signInName" class="input"> -->
+                         <input id="signInName" type="text" name="signInName" class="input" autocomplete="username">
+                     </div>
+                     <div class="group">
+                         <label for="signInPass" class="label" name="password" >Password</label>
+                         <!-- <input id="signInPass" type="password" class="input"  name="password" data-type="password"> -->
+                         <input id="signInPass" type="password" class="input" name="password" data-type="password" autocomplete="current-password">
+                     </div>
+                     <div class="group">
+                         <input id="check" type="checkbox" class="check" checked>
+                         <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                     </div>
+                     <div class="group">
+                         <input type="submit" class="button" value="Sign In">
+                     </div>
+                     <div class="hr"></div>
+                     <div class="foot-lnk">
+                         <a href="#forgot">Forgot Password?</a>
+                     </div>
+                 </div>
+                 <div class="sign-up-htm">
+                     <div class="group">
+                         <label for="user" class="label">Username</label>
+                         <!-- <input id="user" type="text" class="input" name="user"> -->
+                         <input id="user" type="text" class="input" name="user" autocomplete="username">
+                     </div>
+                     <div class="group">
+                         <label for="signUpPass" class="label">Password</label>
+                         <!-- <input id="signUpPass" type="password" class="input" name="password" data-type="password" > -->
+                         <input id="signUpPass" type="password" class="input" name="password" data-type="password" autocomplete="new-password">
+                     </div>
+                     <div class="group">
+                         <label for="passRepeat" class="label">Repeat Password</label>
+                         <!-- <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" > -->
+                         <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password">
+                     </div>
+                     <div class="group">
+                         <label for="signUpAddress" class="label" >Email Address</label>
+                         <!-- <input id="signUpAddress" type="text" name="address"class="input" > -->
+                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email">
+                     </div>
+                     <div class="group">
+                         <input type="submit" class="button" value="Sign Up">
+                     </div>
+                     <div class="hr"></div>
+                     <div class="foot-lnk">
+                         <label for="tab-1">Already Member?</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     </form>
 <!-- footer-->
     <footer>
         <div class="footer_info">
@@ -150,41 +156,44 @@
 
 // login
 function validateForm() {
-    var trimValue = function (element) {
+    function trimValue(element) {
         return element.value.trim();
-    };
+    }
 
-    var checkValidity = function (value, regex, errorMessage, focusElement) {
+    function checkValidity(value, regex, errorMessage) {
         if (!regex.test(value)) {
             alert(errorMessage);
-            focusElement.focus();
-            return;
+            return false;
         }
-        return;
-    };
+        return true;
+    }
 
-    var signInName = trimValue(document.forms.RegForm.signInName);
-    var signInPass = trimValue(document.forms.RegForm.password);
-    var signUpUsername = trimValue(document.forms.RegForm.user);
-    var signUpPass = trimValue(document.forms.RegForm.password);  
-    var passRepeat = trimValue(document.forms.RegForm.passRepeat);
-    var signUpAddress = trimValue(document.forms.RegForm.address);
+    var signInName = trimValue(document.getElementById('signInName'));
+    var signInPass = trimValue(document.getElementById('signInPass'));
+    var signUpUsername = trimValue(document.getElementById('user'));
+    var signUpPass = trimValue(document.getElementById('signUpPass'));
+    var passRepeat = trimValue(document.getElementById('passRepeat'));
+    var signUpAddress = trimValue(document.getElementById('signUpAddress'));
 
-    
-    var regSignInName = /^[a-zA-Z0-9_]+$/;
-    var regSignUpName = /^[a-zA-Z0-9_]+$/;
+    var regAlphanumeric = /^[a-zA-Z0-9_]+$/;
+    var regPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Requires at least one letter and one number
+    var regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-    var regPassword = /^[A-Za-z]{6}$/;
-
-    return (
-        checkValidity(signInName, regSignInName, "Please enter a valid alphanumeric username for sign-in.", document.forms.RegForm.signInName) &&
-        checkValidity(signInPass, regPassword, "Please enter a valid and strong password for sign-in.", document.forms.RegForm.password) &&
-        checkValidity(signUpUsername, regSignUpName, "Please enter a valid alphanumeric username for sign-up.", document.forms.RegForm.user) &&
-        checkValidity(signUpPass, regPassword, "Please enter a valid and strong password for sign-up.", document.forms.RegForm.password) &&
-        checkValidity(signUpPass, passRepeat === signUpPass, "Passwords do not match.", document.forms.RegForm.passRepeat) &&
-        checkValidity(signUpAddress, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Please enter a valid email address for sign-up.", document.forms.RegForm.address)
-    );
+    if (signInName && signInPass) {
+        // Sign In Validation
+        return (
+            checkValidity(signInName, regAlphanumeric, "Please enter a valid alphanumeric username for sign-in.") &&
+            checkValidity(signInPass, regPassword, "Please enter a valid and strong password for sign-in.")
+        );
+    } else {
+        // Sign Up Validation
+        return (
+            checkValidity(signUpUsername, regAlphanumeric, "Please enter a valid alphanumeric username for sign-up.") &&
+            checkValidity(signUpPass, regPassword, "Please enter a valid and strong password for sign-up.") &&
+            checkValidity(signUpPass === passRepeat, true, "Passwords do not match.") &&
+            checkValidity(signUpAddress, regEmail, "Please enter a valid email address for sign-up.")
+        );
+    }
 }
 
  </script> 
