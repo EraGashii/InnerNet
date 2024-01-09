@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" /> -->
     <link rel="stylesheet" href="css/Login.css">
 </head>
 <body>
@@ -34,12 +32,10 @@
                  <div class="sign-in-htm">
                      <div class="group"> 
                          <label for="signInName" class="label" name="name"  >Username</label>
-                         <!-- <input id="signInName" type="text" name="signInName" class="input"> -->
                          <input id="signInName" type="text" name="signInName" class="input" autocomplete="username">
                      </div>
                      <div class="group">
                          <label for="signInPass" class="label" name="password" >Password</label>
-                         <!-- <input id="signInPass" type="password" class="input"  name="password" data-type="password"> -->
                          <input id="signInPass" type="password" class="input" name="password" data-type="password" autocomplete="current-password">
                      </div>
                      <div class="group">
@@ -57,23 +53,19 @@
                  <div class="sign-up-htm">
                      <div class="group">
                          <label for="user" class="label">Username</label>
-                         <!-- <input id="user" type="text" class="input" name="user"> -->
                          <input id="user" type="text" class="input" name="user" autocomplete="username">
                      </div>
                      <div class="group">
                          <label for="signUpPass" class="label">Password</label>
-                         <!-- <input id="signUpPass" type="password" class="input" name="password" data-type="password" > -->
                          <input id="signUpPass" type="password" class="input" name="password" data-type="password" autocomplete="new-password">
                      </div>
                      <div class="group">
-                         <label for="passRepeat" class="label">Repeat Password</label>
-                         <!-- <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" > -->
-                         <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password" required>
+                         <label for="passRepeat" class="label"required>Repeat Password</label>
+                         <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password" >
                      </div>
                      <div class="group">
-                         <label for="signUpAddress" class="label" >Email Address</label>
-                         <!-- <input id="signUpAddress" type="text" name="address"class="input" > -->
-                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email" required>
+                         <label for="signUpAddress" class="label" required>Email Address</label>
+                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email" >
                      </div>
                      <div class="group">
                          <input type="submit" class="button" value="Sign Up">
