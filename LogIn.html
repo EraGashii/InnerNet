@@ -68,12 +68,12 @@
                      <div class="group">
                          <label for="passRepeat" class="label">Repeat Password</label>
                          <!-- <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" > -->
-                         <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password">
+                         <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password" required>
                      </div>
                      <div class="group">
                          <label for="signUpAddress" class="label" >Email Address</label>
                          <!-- <input id="signUpAddress" type="text" name="address"class="input" > -->
-                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email">
+                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email" required>
                      </div>
                      <div class="group">
                          <input type="submit" class="button" value="Sign Up">
@@ -153,7 +153,6 @@
      nav.classList.remove("openNav");
     });
 
-
 // login
 function validateForm() {
     function trimValue(element) {
@@ -185,13 +184,17 @@ function validateForm() {
             checkValidity(signInName, regAlphanumeric, "Please enter a valid alphanumeric username for sign-in.") &&
             checkValidity(signInPass, regPassword, "Please enter a valid and strong password for sign-in.")
         );
-    } else {
+    } else if(signUpPass !== passRepeat){
+    alert("Passwords do not match.");
+    return false;
+    }
+    else {
         // Sign Up Validation
         return (
             checkValidity(signUpUsername, regAlphanumeric, "Please enter a valid alphanumeric username for sign-up.") &&
             checkValidity(signUpPass, regPassword, "Please enter a valid and strong password for sign-up.") &&
-            checkValidity(signUpPass === passRepeat, true, "Passwords do not match.") &&
-            checkValidity(signUpAddress, regEmail, "Please enter a valid email address for sign-up.")
+            checkValidity(signUpAddress, regEmail, "Please enter a valid email address for sign-up.") &&
+            checkValidity(signUpAddress.includes('@'), true, "Please enter a valid email address for sign-up.")
         );
     }
 }
