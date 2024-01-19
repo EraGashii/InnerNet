@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/features.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/cards_features.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-</head>
-<body>
-    <header>
-       
-        <nav class="nav">
-          <i class="uil uil-bars navOpenBtn"></i>
-          <!-- <a href="#" class="logo">InsideOut</a> -->
-          <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
-          <ul class="nav-links">
-            <i class="uil uil-times navCloseBtn"></i>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li><a href="LogIn.html">Log in</a></li>
-          </ul>
-        </nav>
-    
-        </header><!-- navbar ka me permbajt logo about edhe contact us-->
+<?php include 'Include/header3.php'?>
 
  <!--doctors section starts-->
  <section class="psychologist" id="psychologist">
@@ -106,59 +78,8 @@
 </section>
 
 <!--doctors section ends-->
-    <footer>
-        <div class="footer_info">
-            <div class="footer_width about">
-              <p>If you are in a life threatening situation - don’t use this site. Call 988 to get immediate help</p>
-          <div class="social-media">
-            <ul>
-                <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
-                <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
-                 <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
-            </ul>
-          </div>
-                    </div>
-                   
-            <div class="footer_width link">
-                <h2>Quick Link</h2>
-                <ul class="other_pages">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Features.html">Features</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="LogIn.html">Log in</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </div>
-            <div class="footer_width contact">
-              <h2>Contact</h2>
-              <ul>
-                  <li>
-                      <span><i class="lni lni-map-marker"></i></span>
-                      <a href="">
-                       Rruga Drini Bardhe -Kline  
-                          8368   
-                      </a>
-                  </li>
-                  <li>
-                      <span><i class="lni lni-envelope"></i></span>
-                        <a href="">InsideOut@gmail.com</a>
-                  </li>
-                  <li>
-                      <span><i class="lni lni-phone"></i></span>
-                     <a href="">044-489-488</a>
-                  </li>
-                  <li>
-                    <span><i class="lni lni-phone"></i></span>
-                    <a href="">045-304-302</a>           
-                 </li>
-             </ul>
-         </div>
-    
-        </div>
-        <div class="copy-right">
-            <p>2023 @ InnerNet</p>
-        </div>
-    </footer>
+  
+<?php include 'Include/footer.php'?>
 
     <script>
           const nav = document.querySelector(".nav"),
@@ -173,5 +94,3 @@
      nav.classList.remove("openNav");
     });
     </script>
-</body>
-</html>

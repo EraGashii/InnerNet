@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-</head>
-<body>
-    <header> 
-    <nav class="nav">
-      <i class="uil uil-bars navOpenBtn"></i>
-      <a href="Index.html" class="logo"><img src="image/InsideOut.png" width="90px"></a>
-      <ul class="nav-links">
-        <i class="uil uil-times navCloseBtn"></i>
-        <li><a href="#">Home</a></li>
-        <li><a href="Features.html">Features</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact us</a></li>
-        <li><a href="LogIn.html">Log in</a></li>
-      </ul>
-    </nav>
-  </header>
+<?php include 'Include/header.php'?>
 
   <!--about us link-->
   <section class="about-us">
@@ -47,7 +23,6 @@
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
-        <i class="fa-light fa-hammer"></i>
       </div>
       <h3>Individual and couple psychological treatment</h3>
     </div>
@@ -55,7 +30,6 @@
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
-        <i class="fas fa-brush"></i>
       </div>
       <h3>Psycho-educational intervention in the family and in the individual</h3>
     </div>
@@ -63,7 +37,6 @@
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
-        <i class="fas fa-wrench"></i>
       </div>
       <h3>Anxiety and depression treatment </h3>
     </div>
@@ -71,7 +44,6 @@
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
-        <i class="fas fa-truck-pickup"></i>
       </div>
       <h3>Trauma treatment</h3>
     </div>
@@ -87,7 +59,6 @@
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
-        <i class="fas fa-plug"></i>
       </div>
       <h3>Increasing self-esteem and self-confidence</h3>
     </div>
@@ -107,7 +78,7 @@
       <img class="image-item" src="image/slider7.jpeg" alt="img-4" />
       <img class="image-item" src="image/slider8.jpeg" alt="img-1" />
       <img class="image-item" src="image/slider2.jpg" alt="img-2" />
-      <img class="image-item" src="image/slider.jpeg" alt="img-3" />
+      <img class="image-item" src="image/slider5.jpeg" alt="img-3" />
       <img class="image-item" src="image/slider6.jpeg" alt="img-5" />
     </ul>
     <button id="next-slide" class="slide-button material-symbols-rounded">
@@ -148,57 +119,10 @@
 </section>
 <!--icon section end-->
 <!-- end-->
-  <footer>
-      <div class="footer_info">
-          <div class="footer_width about">
-              <p>If you are in a life threatening situation - don’t use this site. Call 988 to get immediate help</p>
-        <div class="social-media">
-          <ul>
-              <li><a href="#" class="lni2"><i class="lni lni-facebook-original"></i></a></li>
-              <li><a href="#" class="lni2"><i class="lni lni-instagram-original"></i></a></li>
-              <li><a href="#" class="lni2"><i class="lni lni-tiktok"></i></a></li>
-            </ul>
-          </div>
-                    </div>          
-            <div class="footer_width link">
-                <h2>Quick Link</h2>
-                <ul class="other_pages">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="Features.html">Features</a></li>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="LogIn.html">Log in</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
-              </ul>
-            </div>
-            <div class="footer_width contact">
-                <h2>Contact</h2>
-                <ul>
-                    <li>
-                        <span><i class="lni lni-map-marker"></i></span>
-                        <a href="">
-                         Rruga Drini Bardhe -Kline  
-                            8368   
-                        </a>
-                    </li>
-                    <li>
-                        <span><i class="lni lni-envelope"></i></span>
-                          <a href="">InsideOut@gmail.com</a>
-                    </li>
-                    <li>
-                        <span><i class="lni lni-phone"></i></span>
-                       <a href="">044-489-488</a>
-                    </li>
-                    <li>
-                      <span><i class="lni lni-phone"></i></span>
-                      <a href="">045-304-302</a>           
-                   </li>
-               </ul>
-           </div>
-       </div>
-       <div class="copy-right">
-           <p style="color: white;">2023 @InsideOut</p>
-       </div>
-   </footer>
+
+<!-- footer -->
+<?php include 'Include/footer.php' ?>
+
    <script>
    const nav = document.querySelector(".nav"),
      navOpenBtn = document.querySelector(".navOpenBtn"),
@@ -283,5 +207,3 @@
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
     </script>
-</body>
-</html>
