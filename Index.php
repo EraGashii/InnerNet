@@ -1,6 +1,5 @@
 <?php include 'Include/header.php'?>
-
-  <!--about us link-->
+  <!--about us -->
   <section class="about-us">
     <div class="about">
       <img src="image/aboutUs.jpg" class="pic">
@@ -15,6 +14,7 @@
     </div>
   </section>
 <!-- sercives-->
+
 <section>
 <div class="row">
   <h2 class="section-heading">Our Services</h2>
@@ -65,9 +65,11 @@
   </div>
 </div>
 </section>
+<!-- slide-wrapper -->
 <div class="container">
   <div class="slider-wrapper">
     <button id="prev-slide" class="slide-button material-symbols-rounded">
+      <
     </button>
     <ul class="image-list">
       <img class="image-item" src="image/slider5.jpeg" alt="img-4" />
@@ -87,12 +89,14 @@
   </div>
   <div class="slider-scrollbar">
     <div class="scrollbar-track">
-      <div class="scrollbar-thumb"></div>
+      <div c  ass="scrollbar-thumb"></div>
     </div>
   </div>
 </div>
+<!-- slide-wrapper end -->
 <!--icons section start-->
 <section class="icons-container">
+
   <div class="icons">
       <i class="lni lni-user"></i>
       <h3>6+</h3>
@@ -118,7 +122,6 @@
     </div>
 </section>
 <!--icon section end-->
-<!-- end-->
 
 <!-- footer -->
 <?php include 'Include/footer.php' ?>
@@ -130,7 +133,7 @@
    
    navOpenBtn.addEventListener("click", () => {
      nav.classList.add("openNav");
-     searchIcon.classList.replace("uil-times");
+  
    });
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");
@@ -138,24 +141,27 @@
     
   //  slidershow
 
+  // initSlider do të thirret në fillim për të konfiguruar dhe inicializuar elementët dhe parametrat e nevojshëm për slider-in.
     const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
     const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
     const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
     const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
     
+  //  kur klikojm ikonen me maus atehere ekzekutohet ky kod ne baze te levizjes te mausit
 
     scrollbarThumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = scrollbarThumb.offsetLeft;
-        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+        const startX = e.clientX; //pozita fillestare
+        const thumbPosition = scrollbarThumb.offsetLeft;//i jep hapesir ne anen e majt
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;//kjo na ndihmon qe edhe kur te prekim na next te fotot mos me na ndrru width edhe me e marr gjith te njejt hapesiren edhe e merr hapesiren maksimale qe mundet
         
 
         const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
+            const deltaX = e.clientX - startX; 
             const newThumbPosition = thumbPosition + deltaX;
-
 
             const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
             const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;

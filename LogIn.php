@@ -1,11 +1,12 @@
-<?php include 'Include/header4.php'?>
+<?php include 'Include/header4.php'
+?>
+    <!-- login -->
+  <form name="RegForm" onsubmit="return validateForm()" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 
-        <!-- navbar ka me permbajt logo about edhe contact us--><!-- navbar ka me permbajt logo about edhe contact us-->
-        <form name="RegForm" onsubmit="return validateForm()" method="post">
-            <div class="login-wrap">
-         <div class="login-html">
-             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
+        <div class="login-wrap">
+           <div class="login-html">
+              <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+               <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
              <div class="login-form">
                  <div class="sign-in-htm">
                      <div class="group"> 
@@ -21,14 +22,15 @@
                          <label for="check"><span class="icon"></span> Keep me Signed in</label>
                      </div>
                      <div class="group">
-                         <input type="submit" class="button" value="Sign In">
+                         <input type="submit" name="sign-in" class="button" value="Sign In">
                      </div>
                      <div class="hr"></div>
                      <div class="foot-lnk">
                          <a href="#forgot">Forgot Password?</a>
                      </div>
                  </div>
-                 <div class="sign-up-htm">
+
+             <div class="sign-up-htm">
                      <div class="group">
                          <label for="user" class="label">Username</label>
                          <input id="user" type="text" class="input" name="user" autocomplete="username">
@@ -43,10 +45,10 @@
                      </div>
                      <div class="group">
                          <label for="signUpAddress" class="label" required>Email Address</label>
-                         <input id="signUpAddress" type="text" name="address" class="input" autocomplete="email" >
+                         <input id="signUpAddress" type="text" name="email" class="input" autocomplete="email" >
                      </div>
                      <div class="group">
-                         <input type="submit" class="button" value="Sign Up">
+                         <input type="submit" name="signup" class="button" value="Sign Up">
                      </div>
                      <div class="hr"></div>
                      <div class="foot-lnk">
@@ -56,7 +58,32 @@
              </div>
          </div>
      </div>
-     </form>
+ </form>
+ <?php
+
+
+include_once 'Model/user.php';
+include_once 'repository/userRepository.php';   
+if(isset($_POST['signup'])){
+    if( empty($_POST['user']) || empty($_POST['email'])  || empty($_POST['password'])){
+        echo "Fill all fields!";
+    }else{
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        // $id = $username.rand(100,999);
+        $user  = new User($username,$email,$password);
+        
+        $userRepository = new UserRepository();
+        $userRepository->insertUser($username,$email,$password);
+
+    }
+}
+
+
+
+?>
+ 
 <!-- footer-->
 
 <?php include 'Include/footer.php'?>
@@ -68,7 +95,6 @@
    
    navOpenBtn.addEventListener("click", () => {
      nav.classList.add("openNav");
-     searchIcon.classList.replace("uil-times");
    });
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");
@@ -96,7 +122,7 @@ function validateForm() {
     var signUpAddress = trimValue(document.getElementById('signUpAddress'));
 
     var regAlphanumeric = /^[a-zA-Z0-9_]+$/;
-    var regPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Requires at least one letter and one number
+    var regPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; 
     var regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (signInName && signInPass) {

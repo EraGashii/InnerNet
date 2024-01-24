@@ -4,7 +4,7 @@ class DatabaseConenction{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database = "g3b";
+    private $database = "InsideOut";
 
 
     function startConnection(){

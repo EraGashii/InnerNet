@@ -10,22 +10,20 @@ class UserRepository{
     }
 
 
-    function insertUser($user){
+    function insertUser($username,$email,$password){
 
         $conn = $this->connection;
 
-        $id = $user->getId();
-        $name = $user->getName();
-        $surname = $user->getSurname();
-        $email = $user->getEmail();
-        $username = $user->getUsername();
-        $password = $user->getPassword();
+        // // $id = $user->getId();
+        // $email = $user->getEmail();
+        // $username = $user->getUsername();
+        // $password = $user->getPassword();
 
-        $sql = "INSERT INTO user (id,name,surname,email,username,password) VALUES (?,?,?,?,?,?)";
+        $sql = "INSERT INTO user (username,email,password) VALUES (?,?,?)";
 
         $statement = $conn->prepare($sql);
 
-        $statement->execute([$id,$name,$surname,$email,$username,$password]);
+        $statement->execute([$username,$email,$password]);
 
         echo "<script> alert('User has been inserted successfuly!'); </script>";
 
@@ -53,14 +51,14 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($id,$name,$surname,$email,$username,$password){
+    function updateUser($id,$username,$email,$password){
          $conn = $this->connection;
 
-         $sql = "UPDATE user SET name=?, surname=?, email=?, username=?, password=? WHERE id=?";
+         $sql = "UPDATE user SET  username=?, email=?, password=? WHERE id=?";
 
          $statement = $conn->prepare($sql);
 
-         $statement->execute([$name,$surname,$email,$username,$password,$id]);
+         $statement->execute([$id,$username,$email,$password]);
 
          echo "<script>alert('update was successful'); </script>";
     } 
@@ -78,7 +76,6 @@ class UserRepository{
    } 
 }
 
-//  $userRepo = new UserRepository;
 
 //  $userRepo->updateUser('1111','SSS','SSS','SSS','SSS','SSS');
 
