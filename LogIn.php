@@ -32,15 +32,15 @@
 
              <div class="sign-up-htm">
                      <div class="group">
-                         <label for="user" class="label">Username</label>
-                         <input id="user" type="text" class="input" name="user" autocomplete="username">
+                         <label for="username" class="label">Username</label>
+                         <input id="user" type="text" class="input" name="username" autocomplete="username">
                      </div>
                      <div class="group">
                          <label for="signUpPass" class="label">Password</label>
                          <input id="signUpPass" type="password" class="input" name="password" data-type="password" autocomplete="new-password">
                      </div>
                      <div class="group">
-                         <label for="passRepeat" class="label"required>Repeat Password</label>
+                         <label for="passRepeat" class="label" >Repeat Password</label>
                          <input id="passRepeat" type="password" class="input" data-type="password" name="passRepeat" autocomplete="new-password" >
                      </div>
                      <div class="group">
@@ -59,31 +59,9 @@
          </div>
      </div>
  </form>
- <?php
-
-
-include_once 'Model/user.php';
-include_once 'repository/userRepository.php';   
-if(isset($_POST['signup'])){
-    if( empty($_POST['user']) || empty($_POST['email'])  || empty($_POST['password'])){
-        echo "Fill all fields!";
-    }else{
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        // $id = $username.rand(100,999);
-        $user  = new User($username,$email,$password);
-        
-        $userRepository = new UserRepository();
-        $userRepository->insertUser($username,$email,$password);
-
-    }
-}
 
 
 
-?>
- 
 <!-- footer-->
 
 <?php include 'Include/footer.php'?>
