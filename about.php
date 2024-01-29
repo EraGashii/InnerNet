@@ -1,4 +1,5 @@
-<?php include 'Include/header1.php'?>
+<?php session_start();
+include 'Include/header1.php'?>
   <section class="about-us">
     <div class="about">
       <img src="image/about.jpg" class="pic">

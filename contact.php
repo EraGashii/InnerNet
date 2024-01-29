@@ -1,4 +1,6 @@
-<?php include 'Include/header2.php'?>
+<?php
+session_start();
+ include 'Include/header2.php'?>
     </nav>
   </header><!-- navbar ka me permbajt logo about edhe contact us-->
          <!-- contact Us -->

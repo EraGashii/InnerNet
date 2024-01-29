@@ -1,7 +1,66 @@
-<?php include 'Include/header3.php'?>
 
- <!--doctors section starts-->
- <section class="psychologist" id="psychologist">
+<?php session_start();
+include 'Include/header3.php';
+// include 'psychologist.php'
+?>
+
+<section class="psychologist" id="psychologist">
+    <div class="heading">
+        <h1>OUR PSYCHOLOGIST</h1>
+        <p>These are among the most successful psychologists in Kosovo who cooperate with <i>InsideOut</i></p>
+    </div>
+    <div class="box-container">
+    <?php
+// Database connection parameters
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "InsideOut";
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to select psychologists from the database
+$sql = "SELECT id, name, type, img FROM Psychologist";
+$result = $conn->query($sql);
+
+// Check if the query was successful
+if ($result === false) {
+    die("Error executing query: " . $conn->error);
+}
+
+// Check if there are results
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while ($row = $result->fetch_assoc()) {
+        // HTML structure for each psychologist
+        echo '<div class="box">
+                <img src="' . htmlspecialchars($row["img"]) . '" alt="">
+                <span><b>' . htmlspecialchars($row["name"]) . '</b></span><br>
+                <span>' . htmlspecialchars($row["type"]) . '</span>
+              </div>';
+    }
+} else {
+    echo "0 results";
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+    </div>
+</section>
+
+ <!-- section starts-->
+ <!-- <section class="psychologist" id="psychologist">
     <div class="heading">
         <h1 >OUR PSYCHOLOGIST</h1>
         <p>These are among the most successful psychologists in Kosovo who cooperate with <i>InsideOut</i></p> 
@@ -75,9 +134,9 @@
           </div>
       </div>
   </div>
-</section>
+</section> -->
 
-<!--doctors section ends-->
+<!-- section ends-->
   
 <?php include 'Include/footer.php'?>
 

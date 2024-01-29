@@ -1,7 +1,6 @@
 <?php 
-include_once '../database/DatabaseConnection.php';
-include_once '../database/user.php';
-
+include_once 'database/DatabaseConnection.php';
+include_once 'models/user.php';
 
 class UserRepository{
     private $connection;
@@ -19,7 +18,6 @@ class UserRepository{
         $username = $user->getUsername();
         $password = $user->getPassword();
    
-
 
         $sql = "INSERT INTO user (id,username,email,password) VALUES (?,?,?,?)";
 

@@ -1,16 +1,23 @@
-<?php include 'Include/header4.php'
-?>
-    <!-- login -->
-  <form name="RegForm" onsubmit="return validateForm()" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<?php 
+session_start();
 
-        <div class="login-wrap">
+include 'Include/header4.php';
+
+include 'loginController.php';
+  
+
+?>
+
+    <!-- login -->
+  <form name="RegForm" onsubmit="return validateForm()" action="<?php echo $_SERVER['PHP_SELF'] ?>"   action="loginController.php"  method="post">
+            <div class="login-wrap">
            <div class="login-html">
               <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" >Sign Up</label>
              <div class="login-form">
                  <div class="sign-in-htm">
                      <div class="group"> 
-                         <label for="signInName" class="label" name="name"  >Username</label>
+                         <label for="signInName" class="label" name="name">Username</label>
                          <input id="signInName" type="text" name="signInName" class="input" autocomplete="username">
                      </div>
                      <div class="group">
@@ -29,7 +36,6 @@
                          <a href="#forgot">Forgot Password?</a>
                      </div>
                  </div>
-
              <div class="sign-up-htm">
                      <div class="group">
                          <label for="username" class="label">Username</label>
@@ -59,6 +65,8 @@
          </div>
      </div>
  </form>
+
+ <?php include 'controller/registerController.php'?>
 
 
 
@@ -123,4 +131,5 @@ function validateForm() {
         );
     }
 }
+...
  </script> 

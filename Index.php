@@ -1,4 +1,13 @@
-<?php include 'Include/header.php'?>
+<?php 
+session_start();
+include 'Include/header.php';
+include_once 'database/DatabaseConnection.php';
+include_once 'repository/serviseRepository.php';
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
+
   <!--about us -->
   <section class="about-us">
     <div class="about">
@@ -15,9 +24,26 @@
   </section>
 <!-- sercives-->
 
-<section>
-<div class="row">
-  <h2 class="section-heading">Our Services</h2>
+<!--  -->
+
+<section id="services" class="services-section">
+    <h2 class="section-heading">Our Services</h2>
+    <div class="row">
+        <?php foreach ($services as $service): ?>
+            <div class="column">
+                <div class="card">
+                    <h3><?php echo $service['name']; ?></h3>
+                    <p><?php echo $service['description']; ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+
+    
+
+  <!-- <h2 class="section-heading">Our Services</h2>
 </div>
 <div class="row">
   <div class="column">
@@ -54,8 +80,8 @@
         <i class="fas fa-broom"></i>
       </div>
       <h3>Treatment of divorces, separations or addictions in the relationship</h3>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div>
   <div class="column">
     <div class="card">
       <div class="icon-wrapper">
@@ -63,7 +89,7 @@
       <h3>Increasing self-esteem and self-confidence</h3>
     </div>
   </div>
-</div>
+</div> -->
 </section>
 <!-- slide-wrapper -->
 <div class="container">

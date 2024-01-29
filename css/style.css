@@ -328,6 +328,7 @@ color: #ffffff;
 color: #f0f0f0;
 }
 .section-heading{
+  text-align: center;
 color:#344953;
 }
 @media screen and (min-width: 768px) {

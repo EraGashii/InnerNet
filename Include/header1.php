@@ -10,6 +10,23 @@
 </head>
 <body>
     <header> 
+    <?php
+      $hide=" ";
+       if(isset($_SESSION['email'])){
+
+        if($_SESSION['role'] =="admin"){
+          $hide=" ";
+        }
+        else{
+          $hide="hide";
+        }
+       }
+       else{
+
+        $hide="hide";
+       }
+
+?> 
     <nav class="nav">
       <i class="uil uil-bars navOpenBtn"></i>
       <a href="Index.php" class="logo"><img src="image/InsideOut.png" width="90px"></a>
@@ -18,6 +35,7 @@
         <li><a href="Index.php">Home</a></li>
         <li><a href="Features.php">Features</a></li>
         <li><a href="#">About Us</a></li>
+        <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
         <li><a href="contact.php">Contact us</a></li>
         <li><a href="LogIn.php">Log in</a></li>
       </ul>
