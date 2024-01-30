@@ -42,6 +42,11 @@
             <span class="nav-item">Psychologist</span>
           </a>
           </li>
+          <li><a href="message.php">
+            <i class="fab fa-dochub"></i>
+            <span class="nav-item">Messages</span>
+          </a>
+          </li>
           <li><a href="logout.php" class="logout">
             <i class="fas fa-sign-out-alt"></i>
             <span class="nav-item">Logout</span>

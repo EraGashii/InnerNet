@@ -9,13 +9,12 @@ include 'include/dashboardHeader.php';
 ?>
 
 
-
     <section class="main">
     <div class="admin-container">
 
 <main class="admin-content">
     <form id="serviceCreationForm" method="post">
-        <!-- Ensure the input names are 'name' and 'description' -->
+   
         <label for="name">Service Name:</label>
         <input type="text" id="name" name="name" required/>
 

@@ -3,6 +3,7 @@ session_start();
 
 include 'repository/userRepository.php';
 
+
 $conn = mysqli_connect("localhost", "root", "", "InsideOut");
  
 ini_set('display_errors', 1);
@@ -16,7 +17,7 @@ if (isset($_POST['sign-in'])) {
     if (empty($_POST["signInName"]) || empty($_POST["password"])) {
         echo '<script>alert("Fill all fields!")</script>';
     } else {
-      
+   
         $signInName = $_POST['signInName'];
         $password = $_POST['password'];
         $users=[];
@@ -35,7 +36,8 @@ if (isset($_POST['sign-in'])) {
         }
   $i=0;
   foreach($users as $user){
-        if ($user['signInName'] == $signInName && $user['password'] == $password) {
+        // if ($user['signInName'] == $signInName && $user['password'] == $password) {
+          if ($user->getSignInName() == $signInName && $user->getPassword() == $password) {
 
   
         $_SESSION['signInName'] = $signInName;
@@ -77,42 +79,7 @@ if(isset($_POST['signup'])){
 
 ?>
   
-        <!-- // if (!$stmt) {
-        //     die("Query preparation failed: " . mysqli_error($conn));
-        // }
 
-        // mysqli_stmt_bind_param($stmt, "s", $signInName);
-        // mysqli_stmt_execute($stmt);
-
-        // $result = mysqli_stmt_get_result($stmt);
-
-        // if (!$result) {
-        //     die("Query failed: " . mysqli_error($conn));
-        // }
-
-        // $user = mysqli_fetch_assoc($result);
-
-//         if ($user && password_verify($password, $user['password'])) {
-//             $_SESSION['id'] = $user['id'];
-//             $_SESSION['signInName'] = $user['signInName'];
-//             $_SESSION['email'] = $user['email'];
-//             $_SESSION['role'] = $user['role'];
-//             $_SESSION['loginTime'] = date("h:i:s");
-
-//             session_regenerate_id();
-
-//             header("Location: ../index.php");
-//             exit();
-//         } else {
-//             echo "Incorrect username or password";
-//         }
-
-//         mysqli_stmt_close($stmt);
-//     }
-// }
-
-// mysqli_close($conn);
-?> -->
 
 
 

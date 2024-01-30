@@ -2,7 +2,7 @@
 session_start();
  include 'Include/header2.php'?>
     </nav>
-  </header><!-- navbar ka me permbajt logo about edhe contact us-->
+  </header>
          <!-- contact Us -->
 
         <div class="container">
@@ -46,11 +46,11 @@ session_start();
                 </div>
               </div>
             </div>
-            
+            <form action="contact-form.php" method="post" autocomplete="off">
             <div class="contact-form">
               <span class="circle one"></span>
               <span class="circle two"></span>
-              <form action="index.html" autocomplete="off">
+              <!-- <form action="index.html" autocomplete="off"> -->
                 <h3 class="title" >Contact us</h3>
                 <div class="input-container">
                   <input type="text" name="name" class="input" placeholder="Username" required />
@@ -65,10 +65,11 @@ session_start();
                   <textarea name="message" class="input" placeholder="Message" required></textarea>
                 </div>
                 <input type="submit" value="Send" class="btn" />
-              </form>
+              <!-- </form> -->
             </div>
           </div>
         </div>
+</form>
 
         <?php include 'Include/footer.php'?>
         

@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 include_once 'database/DatabaseConnection.php';
 include_once 'models/user.php';
 

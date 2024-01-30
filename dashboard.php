@@ -9,7 +9,7 @@ include 'include/dashboardHeader.php';
 
     <section class="main">
       <div class="main-top">
-        <p>Dashboard</p>
+        <p>Dashbohhard</p>
       </div>
        <div class="main-body"> 
       <div class="job_card">
@@ -60,6 +60,19 @@ include 'include/dashboardHeader.php';
           <div class="text">
             <h2>Psychologist</h2>
             <span>Psychologist-InsideOut</span>
+          </div>
+          </a>
+        </div>
+        </div>
+        <div class="job_card">
+        <div class="job_details">
+          <div class="img">
+            <i class="fab fa-facebook"></i>
+          </div>
+          <li><a href="message.php">
+          <div class="text">
+            <h2>Messages</h2>
+            <span>Messages-InsideOut</span>
           </div>
           </a>
         </div>

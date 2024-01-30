@@ -1,63 +1,57 @@
 
 <?php session_start();
+include './repository/psychologistRepository.php';
 include 'Include/header3.php';
-// include 'psychologist.php'
-?>
-
-<section class="psychologist" id="psychologist">
-    <div class="heading">
-        <h1>OUR PSYCHOLOGIST</h1>
-        <p>These are among the most successful psychologists in Kosovo who cooperate with <i>InsideOut</i></p>
-    </div>
-    <div class="box-container">
-    <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "InsideOut";
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// SQL query to select psychologists from the database
-$sql = "SELECT id, name, type, img FROM Psychologist";
-$result = $conn->query($sql);
-
-// Check if the query was successful
-if ($result === false) {
-    die("Error executing query: " . $conn->error);
-}
-
-// Check if there are results
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while ($row = $result->fetch_assoc()) {
-        // HTML structure for each psychologist
-        echo '<div class="box">
-                <img src="' . htmlspecialchars($row["img"]) . '" alt="">
-                <span><b>' . htmlspecialchars($row["name"]) . '</b></span><br>
-                <span>' . htmlspecialchars($row["type"]) . '</span>
-              </div>';
-    }
-} else {
-    echo "0 results";
-}
-
-// Close the database connection
-$conn->close();
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologist Details</title>
 
+
+</head>
+<body>
+<section>
+<br><br>
+<div class="psychologists-section">
+<br><br>
+    <h2 class="section-title">Our Psychologists</h2>
+    <br>
+    <div class="box-container">
+    <?php foreach ($psychologist as $psychologist): ?>
+            <div class="psychologist">
+                <?php $relativePath = "image/" . basename($psychologist['img']); ?>
+                <img src="<?php echo $relativePath; ?>" alt="<?php echo $psychologist['name']; ?>">
+                <div class="psychologist-content">
+                    <h3 class="psychologist-name"><?php echo $psychologist['name']; ?></h3>
+                    <p class="psychologist-type"><?php echo $psychologist['type']; ?></p>
+                    <div class="share">
+                          <a href="https://www.facebook.com/trajtimpsikologjik/" class="lni lni-facebook-original"></a>
+                          <a href="#" class="lni lni-instagram-original"></a>
+                          <a href="#" class="lni lni-linkedin-original"></a>
+          </div>
+                    <div class="psychologist-actions">
+                        <!-- Add any additional actions if needed -->
+                        <!-- <a href="psychologist-create.php?id=<?php echo $psychologist['id']; ?>" class="action-button">View Details</a> -->
+                        <a href="psychologist-create.php?id=<?php echo isset($psychologist['id']) ? $psychologist['id'] : ''; ?>" class="action-button">View Details</a>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
+</div>
 </section>
+
+</body>
+</html>
+
+
+
 
  <!-- section starts-->
  <!-- <section class="psychologist" id="psychologist">

@@ -90,7 +90,7 @@ error_reporting(E_ALL);
     </div>
   </div>
 </div> -->
-</section>
+<!-- </section> -->
 <!-- slide-wrapper -->
 <div class="container">
   <div class="slider-wrapper">

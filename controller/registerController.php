@@ -1,7 +1,7 @@
 
 <?php
-session_start();
-include 'repository/userRepository.php';
+// session_start();
+// include 'repository/userRepository.php';
 
 if(isset($_POST['signup'])){
    

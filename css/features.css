@@ -261,10 +261,11 @@ footer{
   }
   
 
-} */
+} 
+
 
 /* psychologist */
-p{
+/* p{
   color:#9EB384;
  
 }
@@ -277,6 +278,9 @@ p{
   color:#435334;
 }
 
+.action-button{
+  color:black;
+}
 .psychologist .box-container{
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(27rem,1fr));
@@ -311,16 +315,16 @@ p{
   color: #9EB384;
   font-size: 1.5rem;
 }
+*/
 
-
-.psychologist .box-container .box .share{
+  .box .share{
   padding-top: 2rem;
 }
 
-.psychologist .box-container .box .share a{
-  height: 5rem;
-  width: 5rem;
-  line-height: 4.5rem;
+.share a{
+  height: 3rem;
+  width: 3rem;
+  line-height: 2.5rem;
   font-size: 2rem;
   color: #9EB384;
   border-radius: .5rem;
@@ -329,11 +333,20 @@ p{
 
 }
 
-.psychologist .box-container .box .share a:hover{
+ .box-container .box .share a:hover{
   background: #9EB384;
   color: #fff;
   box-shadow: .5rem .5rem 0 rgba(22,160,133,.2);
-}
+} 
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 767px) {
   .heading {
@@ -367,4 +380,187 @@ p{
   .social-media ul li a {
     margin-right: 20px; /* Reduce margin for better spacing */
   }
+}
+
+
+
+
+
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Heading Styles */
+.heading {
+  padding-top: 10%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.heading h1 {
+  color: #435334;
+}
+
+/* Psychologists Section Styles */
+.psychologists-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.section-title {
+  color: #435334;
+  text-align: center;
+}
+
+/* Psychologist Box Styles */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 3rem;
+  justify-content: center;
+}
+
+.psychologist {
+  text-align: center;
+}
+
+.psychologist .box {
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #9EB384;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  padding: 2rem;
+}
+
+.psychologist .box img {
+  height: 20rem;
+  border: 0.2rem solid #9EB384;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.psychologist .box h3 {
+  color: #435334;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.psychologist .box p {
+  color: #9EB384;
+  font-size: 1.5rem;
+}
+
+.psychologist .box .action-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  border: 0.1rem solid #9EB384;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.psychologist .box .action-button:hover {
+  background-color: #9EB384;
+  color: #fff;
+}
+
+/* Share Icons Styles */
+.psychologist .box .share {
+  padding-top: 2rem;
+}
+
+.psychologist .box .share a {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: #9EB384;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #9EB384;
+  margin: 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.psychologist .box .share a:hover {
+  background-color: #9EB384;
+  color: #fff;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+}
+
+
+
+
+
+/* Form Section Styles */
+section {
+  padding: 40px;
+  background-color: #f8f8f8;
+}
+
+h2.section-title {
+  color: #435334;
+  text-align: center;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.psychologist {
+  text-align: center;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #9EB384;
+  box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  padding: 20px;
+}
+
+.psychologist img {
+  height: 200px;
+  border: 0.2rem solid #9EB384;
+  border-radius: 0.5rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.psychologist h3 {
+  color: #435334;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.psychologist p {
+  color: #9EB384;
+  font-size: 1.5rem;
+}
+
+.psychologist .action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  border: 0.1rem solid #9EB384;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.psychologist .action-button:hover {
+  background-color: #9EB384;
+  color: #fff;
 }

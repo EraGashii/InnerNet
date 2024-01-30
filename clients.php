@@ -2,6 +2,7 @@
 include 'include/dashboardHeader.php';
 include_once 'database/DatabaseConnection.php';
 include './repository/userRepository.php';
+
 $databaseConnection = new DatabaseConnection();
 $conn = $databaseConnection->startConnection();
 
