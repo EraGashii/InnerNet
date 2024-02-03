@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +41,13 @@
         <li><a href="about.php">About Us</a></li>
         <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
         <li><a href="contact.php">Contact us</a></li>
-        <li><a href="LogIn.php">Log <?php if ($log== " "){
-          echo"In";
-        }else{
-          echo"Out";
-        }   ?></a></li>
+        <?php 
+          if(isset($_SESSION['id'])){
+        ?>
+        <li><a href="logout.php">Log Out</a></li>
+        <?php }else{ ?>
+        <li><a href="Login.php">Log In</a></li>
+       <?php }?>
       </ul>
     </nav>
   </header>

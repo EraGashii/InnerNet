@@ -46,6 +46,7 @@ $messages = $getMessageStmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?php echo $message['email']; ?></td>
                             <td><?php echo $message['phone']; ?></td>
                             <td><?php echo $message['message']; ?></td>
+                  
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

@@ -1,13 +1,15 @@
 <?php
 include 'include/dashboardHeader.php';
 include_once 'database/DatabaseConnection.php';
-include './repository/userRepository.php';
+include '/repository/userRepository.php';
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $databaseConnection = new DatabaseConnection();
 $conn = $databaseConnection->startConnection();
 
-$userRepository = new UserRepository();
-$users = $userRepository->getAllUsers();
+
 
 $getClientQuery = "SELECT id, username, email, password, role FROM user WHERE role = 'client'";
 $getClientStmt = $conn->query($getClientQuery);
@@ -62,7 +64,6 @@ $clients = $getClientStmt->fetchAll(PDO::FETCH_ASSOC);
     </section>
   </div>
 </span>
-
 </body>
 <style>
         body {

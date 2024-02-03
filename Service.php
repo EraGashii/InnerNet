@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -12,7 +12,7 @@ include 'include/dashboardHeader.php';
     <section class="main">
     <div class="admin-container">
 
-<main class="admin-content">
+  <main class="admin-content">
     <form id="serviceCreationForm" method="post">
    
         <label for="name">Service Name:</label>
@@ -24,7 +24,6 @@ include 'include/dashboardHeader.php';
         <button type="submit" class="add-service-btn">Create Service</button>
     </form>
 </main>
-
 </div>
      
     </section>

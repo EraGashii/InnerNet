@@ -1,14 +1,8 @@
 <?php 
-session_start();
-
 include 'Include/header4.php';
-
-include 'loginController.php';
-
 ?>
-
     <!-- login -->
-  <form name="RegForm" onsubmit="return validateForm()" action="<?php echo $_SERVER['PHP_SELF'] ?>"   action="loginController.php"  method="post">
+    <form name="RegForm" onsubmit="return validateForm()" action=" "   method="post">
             <div class="login-wrap">
            <div class="login-html">
               <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -16,12 +10,12 @@ include 'loginController.php';
              <div class="login-form">
                  <div class="sign-in-htm">
                      <div class="group"> 
-                         <label for="signInName" class="label" name="name">Username</label>
-                         <input id="signInName" type="text" name="signInName" class="input" autocomplete="username">
+                         <label for="signInName" class="label" name="loginUsername">Username</label>
+                         <input id="signInName" type="text" name="loginName" class="input" autocomplete="username">
                      </div>
                      <div class="group">
-                         <label for="signInPass" class="label" name="password" >Password</label>
-                         <input id="signInPass" type="password" class="input" name="password" data-type="password" autocomplete="current-password">
+                         <label for="signInPass" class="label" name="loginPassword" >Password</label>
+                         <input id="signInPass" type="password" class="input" name="loginPassword" data-type="password" autocomplete="current-password">
                      </div>
                      <div class="group">
                          <input id="check" type="checkbox" class="check" checked>
@@ -65,9 +59,38 @@ include 'loginController.php';
      </div>
  </form>
 
+ <?php
+session_start();
+include_once 'repository/userRepository.php';
+
+
+if(isset($_POST['sign-in'])){
+    $username=$_POST['loginName'];
+    $password=$_POST['loginPassword'];
+    $userRepo=new UserRepository();
+   
+    $userRepo=$userRepo->loginUser($username,$password);
+    
+
+    if($userRepo){
+        $_SESSION['id']=$userRepo['id'];
+        $_SESSION['username']=$userRepo['username'];
+        $_SESSION['email']=$userRepo['email'];
+        $_SESSION['password']=$userRepo['password'];
+        $_SESSION['role']=$userRepo['role'];
+    
+    if($_SESSION['role']=='admin'){
+        header('Location:dashboard.php');
+    }else{
+        header('Location: Index.php');
+    }
+}else{
+        echo"<script>alert('login failed')</script>";
+}
+}
+
+?>
  <?php include 'controller/registerController.php'?>
-
-
 
 <!-- footer-->
 
@@ -84,6 +107,9 @@ include 'loginController.php';
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");
     });
+
+
+
 
 // login
 function validateForm() {
@@ -130,5 +156,5 @@ function validateForm() {
         );
     }
 }
-...
- </script> 
+
+</script> 

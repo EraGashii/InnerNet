@@ -5,8 +5,6 @@ error_reporting(E_ALL);
 include './repository/psychologistRepository.php';
 include 'include/dashboardHeader.php';
 
-
-
 // Create a database connection
 $dbConnection = new DatabaseConnection();
 $connection = $dbConnection->startConnection();
@@ -27,13 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Handle image upload
     $targetDir = "image/"; // Change this to the directory where you want to store images
+    
+   
+
     $imageName = basename($_FILES["image"]["name"]);
     $targetFilePath = $targetDir . $imageName;
 
     // Check if file already exists
     if (file_exists($targetFilePath)) {
         echo "Error: File already exists.";
-    } elseif ($_FILES["image"]["size"] > 5000000) { // Check file size
+    } elseif ($_FILES["image"]["size"] > 5000000) { 
         echo "Error: File is too large.";
     } else {
         $allowedExtensions = array("jpg", "jpeg", "png", "gif");
@@ -56,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if ($stmt->execute()) {
                     echo "Psychologist added successfully.";
-                    // header("Location: Features.php");
                     header("Location: dashboard.php");
                     exit();
                 } else {
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Close the database connection
+
 $connection = null;
 
 ?>

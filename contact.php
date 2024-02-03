@@ -50,7 +50,6 @@ session_start();
             <div class="contact-form">
               <span class="circle one"></span>
               <span class="circle two"></span>
-              <!-- <form action="index.html" autocomplete="off"> -->
                 <h3 class="title" >Contact us</h3>
                 <div class="input-container">
                   <input type="text" name="name" class="input" placeholder="Username" required />
@@ -65,7 +64,6 @@ session_start();
                   <textarea name="message" class="input" placeholder="Message" required></textarea>
                 </div>
                 <input type="submit" value="Send" class="btn" />
-              <!-- </form> -->
             </div>
           </div>
         </div>
@@ -80,7 +78,6 @@ session_start();
    
    navOpenBtn.addEventListener("click", () => {
      nav.classList.add("openNav");
-    //  searchIcon.classList.replace("uil-times");
    });
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");

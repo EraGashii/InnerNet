@@ -41,7 +41,6 @@ error_reporting(E_ALL);
 </section>
 
 
-    
 
   <!-- <h2 class="section-heading">Our Services</h2>
 </div>

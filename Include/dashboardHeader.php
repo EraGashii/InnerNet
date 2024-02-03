@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['id']) && $_SESSION['role'] == 'client'){
+  header('Location:Index.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link rel="stylesheet" href="css/dashboard.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> -->
 </head>
 <body>
   <div class="container">
@@ -20,11 +28,6 @@
           <li><a href="dashboard.php">
             <i class="fas fa-user"></i>
             <span class="nav-item">Dashboard</span>
-          </a>
-          </li>
-          <li><a href="#">
-            <i class="fas fa-chart-bar"></i>
-            <span class="nav-item">Admin</span>
           </a>
           </li>
           <li><a href="clients.php">
