@@ -29,37 +29,6 @@ if (!empty($aboutUsList)) {
 
 
 ?>
-<!-- 
-  <section class="about-us">
-    <div class="about">
-      <img src="image/about.jpg" class="pic">
-      <div class="text">
-        <h2 style="color:#435334;"> About InsideOut</h2>
-          <p>The creation of  <b  style="color:#9EB384;">InsideOut </b> in 2023 was driven by the need for more accessible resources in finding psychologists, recognizing the crucial importance of mental health.
-            InsideOut has since become a valuable platform, connecting individuals with top psychologists in Kosovo.
-            Through this initiative, we aim to make a positive impact on society.
-              InsideOut facilitates swift connections with the best psychologists, prioritizing the well-being of individuals. Additionally, the platform strives to make therapy more accessible by offering discounts to users.
-  Our primary message is simple yet powerful: <br><b style="color:#435334;">'Your mental health is nothing to be ashamed of, and neither is talking about it.'</b> InsideOut is committed to breaking down barriers and fostering an environment where open conversations about mental health are encouraged and supported.</p>
-      </div>
-    </div>  
-  </section> -->
-  <section class="about-us">
-    <?php
-    // Assuming $aboutUsList is the result obtained from the getAllAboutUs method in your AboutUsRepository
-    foreach ($aboutUsList as $aboutUsItem):
-    ?>
-        <div class="about">
-            <img src="image/about.jpg" class="pic">
-            <div class="text">
-                <h2 style="color:#435334;"><?php echo $aboutUsItem['name']; ?></h2>
-                <p><?php echo $aboutUsItem['description']; ?></p>
-            </div>
-        </div>
-    <?php endforeach; ?>
-</section>
-
-  <?php include 'Include/footer.php'?>
-  
 <script>
     const nav = document.querySelector(".nav"),
      navOpenBtn = document.querySelector(".navOpenBtn"),
@@ -73,3 +42,41 @@ if (!empty($aboutUsList)) {
      nav.classList.remove("openNav");
     });
   </script>
+
+          <!-- <p>The creation of  <b  style="color:#9EB384;">InsideOut </b> in 2023 was driven by the need for more accessible resources in finding psychologists, recognizing the crucial importance of mental health.
+            InsideOut has since become a valuable platform, connecting individuals with top psychologists in Kosovo.
+            Through this initiative, we aim to make a positive impact on society.
+              InsideOut facilitates swift connections with the best psychologists, prioritizing the well-being of individuals. Additionally, the platform strives to make therapy more accessible by offering discounts to users.
+  Our primary message is simple yet powerful: <br><b style="color:#435334;">'Your mental health is nothing to be ashamed of, and neither is talking about it.'</b> InsideOut is committed to breaking down barriers and fostering an environment where open conversations about mental health are encouraged and supported.</p>
+   -->
+ 
+    <?php
+    // Assuming $aboutUsList is the result obtained from the getAllAboutUs method in your AboutUsRepository
+    foreach ($aboutUsList as $aboutUsItem):
+    ?>
+  
+        <div class="about">
+            <img src="image/about.jpg" class="pic">
+            <div class="text">
+                <h2 style="color:#435334;"><?php echo $aboutUsItem['name']; ?></h2>
+                <p><?php echo $aboutUsItem['description']; ?></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
+  <?php include 'Include/footer.php'?>
+  <script>
+    const nav = document.querySelector(".nav"),
+     navOpenBtn = document.querySelector(".navOpenBtn"),
+     navCloseBtn = document.querySelector(".navCloseBtn");
+   
+   navOpenBtn.addEventListener("click", () => {
+     nav.classList.add("openNav");
+    
+   });
+   navCloseBtn.addEventListener("click", () => {
+     nav.classList.remove("openNav");
+    });
+  </script>
+
+
+  

@@ -19,7 +19,7 @@ error_reporting(E_ALL);
 <section>
 <br><br>
 <div class="psychologists-section">
-<br><br>
+   <br><br>
     <h2 class="section-title">Our Psychologists</h2>
     <br>
     <div class="box-container">
@@ -35,34 +35,10 @@ error_reporting(E_ALL);
                     <a href="#" class="lni lni-instagram-original"></a>
                     <a href="#" class="lni lni-linkedin-original"></a>
                 </div>
-                <div class="psychologist-actions">
-                    <a href="psychologist-create.php?id=<?php echo isset($psychologist['id']) ? $psychologist['id'] : ''; ?>" class="action-button">View Details</a>
-                </div>
             </div>
         </div>
     <?php endforeach; ?>
-</div>
-
-    <!-- <div class="box-container">
-      <?php foreach ($psychologist as $psychologist): ?>
-            <div class="psychologist">
-                <?php $relativePath = "image/" . basename($psychologist['img']); ?>
-                <img src="<?php echo $relativePath; ?>" alt="<?php echo $psychologist['name']; ?>">
-                <div class="psychologist-content">
-                    <h3 class="psychologist-name"><?php echo $psychologist['name']; ?></h3>
-                    <p class="psychologist-type"><?php echo $psychologist['type']; ?></p>
-                    <div class="share">
-                          <a href="https://www.facebook.com/trajtimpsikologjik/" class="lni lni-facebook-original"></a>
-                          <a href="#" class="lni lni-instagram-original"></a>
-                          <a href="#" class="lni lni-linkedin-original"></a>
-               </div>
-                    <div class="psychologist-actions">
-                        <a href="psychologist-create.php?id=<?php echo isset($psychologist['id']) ? $psychologist['id'] : ''; ?>" class="action-button">View Details</a>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div> -->
+ </div>
 </div>
 </section>
 
@@ -78,7 +54,7 @@ error_reporting(E_ALL);
    
    navOpenBtn.addEventListener("click", () => {
      nav.classList.add("openNav");
-    //  searchIcon.classList.replace("uil-times");
+
    });
    navCloseBtn.addEventListener("click", () => {
      nav.classList.remove("openNav");

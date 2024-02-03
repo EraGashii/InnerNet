@@ -11,22 +11,14 @@
 <body>
     <header> 
     <?php
-      $hide=" ";
-       if(isset($_SESSION['email'])){
+    $showDashboardLink = false;
 
-        if($_SESSION['role'] =="admin"){
-          $hide=" ";
+    if (isset($_SESSION['email'])) {
+        if ($_SESSION['role'] == "admin") {
+            $showDashboardLink = true;
         }
-        else{
-          $hide="hide";
-        }
-       }
-       else{
-
-        $hide="hide";
-       }
-
-?> 
+    }
+     ?>
     <nav class="nav">
       <i class="uil uil-bars navOpenBtn"></i>
       <a href="Index.php" class="logo"><img src="image/InsideOut.png" width="90px"></a>
@@ -35,9 +27,24 @@
         <li><a href="Index.php">Home</a></li>
         <li><a href="Features.php">Features</a></li>
         <li><a href="about.php">About Us</a></li>
-        <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
         <li><a href="#">Contact us</a></li>
-        <li><a href="LogIn.php">Log in</a></li>
+        <?php 
+         if ($showDashboardLink) {
+          ?>
+          <li><a href="dashboard.php">Dashboard</a></li>
+          <?php
+      }
+        if (isset($_SESSION['id'])) {
+            ?>
+            <li><a href="logout.php">Log Out</a></li>
+            <?php
+        } else {
+            ?>
+            <li><a href="Login.php">Log In</a></li>
+            <?php
+        }
+        ?>
+        
       </ul>
     </nav>
   </header>

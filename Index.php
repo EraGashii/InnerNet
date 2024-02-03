@@ -17,7 +17,7 @@ error_reporting(E_ALL);
         <h5>Online therapy & <span>Designer</span></h5>
           <p>Join over 1,000 people who decided to get help and get happy with InsideOut.</p>
         <div class="data">
-        <a href="about.html" class="hire">Read more</a>
+        <a href="about.php" class="hire">Read more</a>
         </div>
       </div>
     </div>
@@ -40,56 +40,6 @@ error_reporting(E_ALL);
     </div>
 </section>
 
-
-
-  <!-- <h2 class="section-heading">Our Services</h2>
-</div>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-      </div>
-      <h3>Individual and couple psychological treatment</h3>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-      </div>
-      <h3>Psycho-educational intervention in the family and in the individual</h3>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-      </div>
-      <h3>Anxiety and depression treatment </h3>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-      </div>
-      <h3>Trauma treatment</h3>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-        <i class="fas fa-broom"></i>
-      </div>
-      <h3>Treatment of divorces, separations or addictions in the relationship</h3>
-    </div> -->
-  <!-- </div>
-  <div class="column">
-    <div class="card">
-      <div class="icon-wrapper">
-      </div>
-      <h3>Increasing self-esteem and self-confidence</h3>
-    </div>
-  </div>
-</div> -->
-<!-- </section> -->
 <!-- slide-wrapper -->
 <div class="container">
   <div class="slider-wrapper">
@@ -119,6 +69,7 @@ error_reporting(E_ALL);
   </div>
 </div>
 <!-- slide-wrapper end -->
+
 <!--icons section start-->
 <section class="icons-container">
 
